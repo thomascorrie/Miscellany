@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Miscellany</name>
+  </assembly>
+  <namespaces>
+    <namespace name="Miscellany">
+      <category>Miscellany</category>
+    </namespace>
+    <namespace name="Miscellany.Geometry.Abstract">
+      <category>Miscellany.Geometry.Abstract</category>
+    </namespace>
+    <namespace name="Miscellany.Math">
+      <category>Miscellany.Math</category>
+    </namespace>
+  </namespaces>
+</doc>
