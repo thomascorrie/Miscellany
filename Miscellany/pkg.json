@@ -3,7 +3,7 @@
 "file_hash": null,
 "name": "Miscellany",
 "version": "0.1.0",
-"description": "Miscellaneous nodes for Dynamo",
+"description": "Miscelleanous nodes for Dynamo",
 "group": "",
 "keywords": null,
 "dependencies": [],
@@ -12,7 +12,7 @@
 "engine": "dynamo",
 "engine_metadata": "",
 "site_url": "http://www.thomascorrie.com",
-"repository_url": "Put github directory here",
+"repository_url": "https://github.com/thomascorrie/Miscellany",
 "contains_binaries": true,
 "node_libraries": [
 "Miscellany, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null"
