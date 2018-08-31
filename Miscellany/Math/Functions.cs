@@ -8,7 +8,6 @@ namespace Miscellany.Math
 {
     public static class Functions
     {
-        //converts double to decimal
         /// <summary>
         /// Converts a double to a decimal
         /// </summary>
@@ -26,8 +25,7 @@ namespace Miscellany.Math
             else
                 return (decimal)number;
         }
-
-        //converts decimal to double
+        
         /// <summary>
         /// Converts a decimal to a double
         /// </summary>
@@ -39,6 +37,26 @@ namespace Miscellany.Math
         public static double ToDouble(decimal inputDecimal)
         {
             return decimal.ToDouble(inputDecimal);
+        }
+        
+        /// <summary>
+        /// Calculates a running total for a list of numbers
+        /// </summary>
+        /// <param name="list">List of doubles</param>
+        /// <returns name="list">List of running totals</returns>
+        /// <search>
+        /// sum
+        /// </search>
+        public static IList<double> RunningTotal(IList<double> list)
+        {
+            IList<double> sum = new List<double>();
+            double runningTotal = 0;
+            foreach (double d in list)
+            {
+                runningTotal += d;
+                sum.Add(runningTotal);
+            }
+            return sum;
         }
     }
 }
