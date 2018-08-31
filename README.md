@@ -1,5 +1,5 @@
 # Miscellany for Dynamo
-A collection of miscelleanous nodes for [Dynamo](http://www.dynamobim.org/)
+A collection of miscellaneous nodes for [Dynamo](http://www.dynamobim.org/)
 
 ## Package Manager
 Miscellany is not yet available on the Dynamo package manager
