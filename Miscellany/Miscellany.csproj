@@ -69,6 +69,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContainerPacking\Entities.cs" />
+    <Compile Include="ContainerPacking\PackingService.cs" />
     <Compile Include="Dictionary\Dictionary.cs" />
     <Compile Include="Math\Functions.cs" />
     <Compile Include="Geometry\Abstract\Abstract.cs" />

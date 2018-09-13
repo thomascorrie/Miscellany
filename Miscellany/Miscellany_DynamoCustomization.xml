@@ -13,5 +13,8 @@
     <namespace name="Miscellany.Math">
       <category>Miscellany.Math</category>
     </namespace>
+    <namespace name="Miscellany.ContainerPacking">
+      <category>Miscellany.ContainerPacking</category>
+    </namespace>
   </namespaces>
 </doc>
