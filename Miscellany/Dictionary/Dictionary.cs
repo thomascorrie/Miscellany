@@ -7,6 +7,9 @@ using Autodesk.DesignScript.Runtime;
 
 namespace Miscellany
 {
+    /// <summary>
+    /// Dictionary
+    /// </summary>
     public static class Dictionary
     {
         /// <summary>

@@ -8,6 +8,9 @@ using Autodesk.DesignScript.Geometry;
 
 namespace Miscellany.Geometry.Abstract
 {
+    /// <summary>
+    /// CoordinateSystem
+    /// </summary>
     public static class CoordinateSystem
     {
         /// <summary>
@@ -62,6 +65,9 @@ namespace Miscellany.Geometry.Abstract
         }
     }
 
+    /// <summary>
+    /// Plane
+    /// </summary>
     public static class Plane
     {
         /// <summary>
@@ -110,6 +116,9 @@ namespace Miscellany.Geometry.Abstract
         }
     }
 
+    /// <summary>
+    /// Vector
+    /// </summary>
     public static class Vector
     {
         /// <summary>

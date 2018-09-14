@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Miscellany.Math
 {
+    /// <summary>
+    /// Functions
+    /// </summary>
     public static class Functions
     {
         /// <summary>

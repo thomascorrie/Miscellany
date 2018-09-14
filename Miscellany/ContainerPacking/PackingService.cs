@@ -25,8 +25,8 @@ namespace Miscellany.ContainerPacking
         /// <search>
         /// containerpacking
         /// </search>
-        [MultiReturn(new[] { "packedItems", "unpackedItems"})]
-        public static Dictionary<string, List<Miscellany.ContainerPacking.Entities.Item>> Pack(Miscellany.ContainerPacking.Entities.Container container, List<Miscellany.ContainerPacking.Entities.Item> itemsToPack)
+        [MultiReturn(new[] { "packedItems", "unpackedItems", "isCompletePack", "packTimeInMilliseconds", "percentContainerVolumePacked", "percentItemVolumePacked"})]
+        public static Dictionary<string, object> Pack(Miscellany.ContainerPacking.Entities.Container container, List<Miscellany.ContainerPacking.Entities.Item> itemsToPack)
         {
             //Create CromulentBisgetti Container
             decimal dLength = Miscellany.Math.Functions.ToDecimal(container.Length);
@@ -51,6 +51,10 @@ namespace Miscellany.ContainerPacking
             ContainerPackingResult containerPackingResult = CromulentBisgetti.ContainerPacking.PackingService.Pack(containers, items, algorithms).FirstOrDefault();
             //Get the single algorthim packing result from the container packing result
             AlgorithmPackingResult algorithmPackingResult = containerPackingResult.AlgorithmPackingResults.FirstOrDefault();
+            bool IsCompletePack = algorithmPackingResult.IsCompletePack;
+            int PackTimeInMillisecondsSeconds = Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds); //Max limit of int32 for milliseconds is596 hours
+            double PercentContainerVolumePacked = Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentContainerVolumePacked);
+            double PercentItemVolumePacked = Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentItemVolumePacked);
             //Convert CromulentBisgetti items to Miscellany Items
             //Packed Items
             List<Miscellany.ContainerPacking.Entities.Item> itemsPacked = new List<Miscellany.ContainerPacking.Entities.Item>();
@@ -85,9 +89,13 @@ namespace Miscellany.ContainerPacking
                 itemsUnpacked.Add(mItem);
             }
             //Return values
-            var d = new Dictionary<string, List<Miscellany.ContainerPacking.Entities.Item>>();
+            var d = new Dictionary<string, object>();
             d.Add("packedItems", itemsPacked);
             d.Add("unpackedItems", itemsUnpacked);
+            d.Add("isCompletePack", IsCompletePack);
+            d.Add("packTimeInMilliseconds", PackTimeInMillisecondsSeconds);
+            d.Add("percentContainerVolumePacked", PercentContainerVolumePacked);
+            d.Add("percentItemVolumePacked", PercentItemVolumePacked);
             return d;
         }
     }
