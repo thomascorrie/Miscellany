@@ -10,7 +10,6 @@ using Autodesk.DesignScript.Runtime;
 
 namespace Miscellany.ContainerPacking
 {
-
     /// <summary>
     /// PackingService
     /// </summary>
@@ -27,17 +26,20 @@ namespace Miscellany.ContainerPacking
         /// containerpacking
         /// </search>
         [MultiReturn(new[] { "packedItems", "unpackedItems"})]
-        public static Dictionary<string, ContainerPackingResult> Packs(Container container, List<Item> itemsToPack)
+        public static Dictionary<string, List<Item>> Pack(Container container, List<Item> itemsToPack)
         {
-            List<Container> containers = new List<Container> { container };
+            //Create list with single container
+            List <Container> containers = new List<Container> { container };
+            //Select EB-AFIT algorithm using integer of 1
             List<int> algorithms = new List<int> { 1 };
+            //Get container packing result
             ContainerPackingResult containerPackingResult = CromulentBisgetti.ContainerPacking.PackingService.Pack(containers, itemsToPack, algorithms).FirstOrDefault();
+            //Get the single algorthim packing result from the container packing result
             AlgorithmPackingResult algorithmPackingResult = containerPackingResult.AlgorithmPackingResults.FirstOrDefault();
-
             //Return values
-            var d = new Dictionary<string, ContainerPackingResult>();
-            //d.Add("packedItems", display);
-            //d.Add("unpackedItems", pt);
+            var d = new Dictionary<string, List<Item>>();
+            d.Add("packedItems", algorithmPackingResult.PackedItems);
+            d.Add("unpackedItems", algorithmPackingResult.UnpackedItems);
             return d;
         }
     }
