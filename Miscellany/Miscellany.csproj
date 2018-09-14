@@ -69,7 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContainerPacking\Entities.cs" />
     <Compile Include="ContainerPacking\Entities\Container.cs" />
     <Compile Include="ContainerPacking\Entities\Item.cs" />
     <Compile Include="ContainerPacking\PackingService.cs" />

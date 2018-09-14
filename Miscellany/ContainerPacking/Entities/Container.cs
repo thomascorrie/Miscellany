@@ -14,7 +14,7 @@ namespace Miscellany.ContainerPacking.Entities
     /// </summary>
     public class Container
     {
-        CromulentBisgetti.ContainerPacking.Entities.Container c;
+        //CromulentBisgetti.ContainerPacking.Entities.Container c;
 
         #region Private Variables
 
@@ -33,14 +33,14 @@ namespace Miscellany.ContainerPacking.Entities
         /// <param name="height">The container height.</param>
         public Container(int id, double length, double width, double height)
         {
-            decimal dLength = Miscellany.Math.Functions.ToDecimal(length);
-            decimal dWidth = Miscellany.Math.Functions.ToDecimal(width);
-            decimal dHeight = Miscellany.Math.Functions.ToDecimal(height);
-            c = new CromulentBisgetti.ContainerPacking.Entities.Container(id, dLength, dWidth, dHeight);
+            //decimal dLength = Miscellany.Math.Functions.ToDecimal(length);
+            //decimal dWidth = Miscellany.Math.Functions.ToDecimal(width);
+            //decimal dHeight = Miscellany.Math.Functions.ToDecimal(height);
+            //c = new CromulentBisgetti.ContainerPacking.Entities.Container(id, dLength, dWidth, dHeight);
             this.ID = id;
-            this.Length = Miscellany.Math.Functions.ToDouble(c.Length);
-            this.Width = Miscellany.Math.Functions.ToDouble(c.Width);
-            this.Height = Miscellany.Math.Functions.ToDouble(c.Height);
+            this.Length = length; //Miscellany.Math.Functions.ToDouble(c.Length);
+            this.Width = width; //Miscellany.Math.Functions.ToDouble(c.Width);
+            this.Height = height; //Miscellany.Math.Functions.ToDouble(c.Height);
             this.volume = length * width * height;
         }
 

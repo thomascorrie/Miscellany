@@ -16,5 +16,14 @@
     <namespace name="Miscellany.ContainerPacking">
       <category>Miscellany.ContainerPacking</category>
     </namespace>
+    <namespace name="Miscellany.ContainerPacking.Entities">
+      <category>Miscellany.ContainerPacking.Entities</category>
+    </namespace>
+    <namespace name="Miscellany.ContainerPacking.Entities.Container">
+      <category>Miscellany.ContainerPacking.Entities.Container</category>
+    </namespace>
+    <namespace name="Miscellany.ContainerPacking.Entities.Item">
+      <category>Miscellany.ContainerPacking.Entities.Item</category>
+    </namespace>
   </namespaces>
 </doc>

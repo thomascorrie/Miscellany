@@ -14,7 +14,7 @@ namespace Miscellany.ContainerPacking.Entities
     /// </summary>
     public class Item
     {
-        CromulentBisgetti.ContainerPacking.Entities.Item i;
+        //CromulentBisgetti.ContainerPacking.Entities.Item i;
 
         #region Private Variables
 
@@ -37,14 +37,14 @@ namespace Miscellany.ContainerPacking.Entities
         /// </search>
         public Item(int id, double dim1, double dim2, double dim3, int quantity)
         {
-            decimal ddim1 = Miscellany.Math.Functions.ToDecimal(dim1);
-            decimal ddim2 = Miscellany.Math.Functions.ToDecimal(dim2);
-            decimal ddim3 = Miscellany.Math.Functions.ToDecimal(dim3);
-            i = new CromulentBisgetti.ContainerPacking.Entities.Item(id, ddim1, ddim2, ddim3, quantity);
+            //decimal ddim1 = Miscellany.Math.Functions.ToDecimal(dim1);
+            //decimal ddim2 = Miscellany.Math.Functions.ToDecimal(dim2);
+            //decimal ddim3 = Miscellany.Math.Functions.ToDecimal(dim3);
+            //i = new CromulentBisgetti.ContainerPacking.Entities.Item(id, ddim1, ddim2, ddim3, quantity);
             this.ID = id;
-            this.Dim1 = Miscellany.Math.Functions.ToDouble(i.Dim1);
-            this.Dim2 = Miscellany.Math.Functions.ToDouble(i.Dim2);
-            this.Dim3 = Miscellany.Math.Functions.ToDouble(i.Dim3);
+            this.Dim1 = dim1; //Miscellany.Math.Functions.ToDouble(i.Dim1);
+            this.Dim2 = dim2; //Miscellany.Math.Functions.ToDouble(i.Dim2);
+            this.Dim3 = dim3; //Miscellany.Math.Functions.ToDouble(i.Dim3);
             this.volume = dim1 * dim2 * dim3;
             this.Quantity = quantity;
         }
