@@ -24,7 +24,7 @@ namespace Miscellany.ContainerPacking.Entities
 
 
         /// <summary>
-        /// Initializes a new instance of the Item class.
+        /// Initializes a new instance of the Item class for Container Packing. Based on David Chapman's 3DContainerPacking library.
         /// </summary>
         /// <param name="id">The item ID.</param>
         /// <param name="dim1">The length of one of the three item dimensions.</param>

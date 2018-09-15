@@ -14,8 +14,6 @@ namespace Miscellany.ContainerPacking.Entities
     /// </summary>
     public class Container
     {
-        //CromulentBisgetti.ContainerPacking.Entities.Container c;
-
         #region Private Variables
 
         private double volume;
@@ -25,7 +23,7 @@ namespace Miscellany.ContainerPacking.Entities
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the Container class.
+        /// Initializes a new instance of the Container class for Container Packing. Based on David Chapman's 3DContainerPacking library.
         /// </summary>
         /// <param name="id">The container ID.</param>
         /// <param name="length">The container length.</param>
