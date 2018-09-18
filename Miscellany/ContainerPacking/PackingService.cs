@@ -268,7 +268,7 @@ namespace Miscellany.ContainerPacking
             List<double> PercentContainerVolumePacked = new List<double>();
             List<double> PercentItemVolumePacked = new List<double>();
             //Items Count
-            int currentPackGroup = items.Count-1;
+            int currentPackGroup = items.Count - 1;
             //Loop through the containers
             foreach (Miscellany.ContainerPacking.Entities.Container container in containers)
             {
@@ -435,7 +435,7 @@ namespace Miscellany.ContainerPacking
                 if (itemsToPackGroup.Count < minimumBooks && currentPackGroup > 0)
                 {
                     //If there are fewer items in the next group than the minimum, include them all
-                    if (items[currentPackGroup-1].Count < minimumBooks - itemsToPackGroup.Count)
+                    if (items[currentPackGroup - 1].Count < minimumBooks - itemsToPackGroup.Count)
                     {
                         itemsToPackGroup.AddRange(items[currentPackGroup - 1]); //Add 
                         items[currentPackGroup - 1].Clear(); //Remove all items from the list because they are now in the pack list
@@ -450,7 +450,7 @@ namespace Miscellany.ContainerPacking
                         }
                     }
                 }
-                
+
                 //Create CromulentBisgetti Container
                 decimal dLength = Miscellany.Math.Functions.ToDecimal(container.Length);
                 decimal dWidth = Miscellany.Math.Functions.ToDecimal(container.Width);
@@ -507,13 +507,14 @@ namespace Miscellany.ContainerPacking
             {
                 foreach (Item i in l)
                 {
+                    Miscellany.ContainerPacking.Entities.Item mItem = ItemToMiscellany(i);
                     //Create item
-                    double ddim1 = Miscellany.Math.Functions.ToDouble(i.Dim1);
+                    /*double ddim1 = Miscellany.Math.Functions.ToDouble(i.Dim1);
                     double ddim2 = Miscellany.Math.Functions.ToDouble(i.Dim2);
                     double ddim3 = Miscellany.Math.Functions.ToDouble(i.Dim3);
-                    Miscellany.ContainerPacking.Entities.Item mItem = new Miscellany.ContainerPacking.Entities.Item(i.ID, ddim1, ddim2, ddim3, i.Quantity);
+                    Miscellany.ContainerPacking.Entities.Item mItem = new Miscellany.ContainerPacking.Entities.Item(i.ID, ddim1, ddim2, ddim3, i.Quantity);*/
                     //Add packed information
-                    mItem.IsPacked = i.IsPacked;
+                    /*mItem.IsPacked = i.IsPacked;*/
                     itemsUnpacked.Add(mItem);
                 }
             }
@@ -529,6 +530,20 @@ namespace Miscellany.ContainerPacking
             d.Add("percentItemVolumePacked", PercentItemVolumePacked);
             return d;
         }
+        #endregion
+
+        #region Methods
+
+        private static Miscellany.ContainerPacking.Entities.Item ItemToMiscellany(Item i)
+        {
+            double ddim1 = Miscellany.Math.Functions.ToDouble(i.Dim1);
+            double ddim2 = Miscellany.Math.Functions.ToDouble(i.Dim2);
+            double ddim3 = Miscellany.Math.Functions.ToDouble(i.Dim3);
+            Miscellany.ContainerPacking.Entities.Item mItem = new Miscellany.ContainerPacking.Entities.Item(i.ID, ddim1, ddim2, ddim3, i.Quantity);
+            mItem.IsPacked = i.IsPacked;
+            return mItem;
+        }
+
         #endregion
     }
 }
