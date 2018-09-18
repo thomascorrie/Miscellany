@@ -27,20 +27,16 @@ namespace Miscellany.ContainerPacking.Entities
         /// Initializes a new instance of the Item class for Container Packing. Based on David Chapman's 3DContainerPacking library.
         /// </summary>
         /// <param name="id">The item ID.</param>
-        /// <param name="dim1">The length of one of the three item dimensions.</param>
-        /// <param name="dim2">The length of another of the three item dimensions.</param>
-        /// <param name="dim3">The length of the other of the three item dimensions.</param>
-        /// <param name="quantity">The item quantity.</param>
+        /// <param name="dim1">The length of one of the three item dimensions</param>
+        /// <param name="dim2">The length of another of the three item dimensions</param>
+        /// <param name="dim3">The length of the other of the three item dimensions</param>
+        /// <param name="quantity">The item quantity (the default is 1)</param>
         /// <returns name="item">Item object</returns>
         /// <search>
         /// containerpacking
         /// </search>
-        public Item(int id, double dim1, double dim2, double dim3, int quantity)
+        public Item(int id, double dim1, double dim2, double dim3, int quantity = 1)
         {
-            //decimal ddim1 = Miscellany.Math.Functions.ToDecimal(dim1);
-            //decimal ddim2 = Miscellany.Math.Functions.ToDecimal(dim2);
-            //decimal ddim3 = Miscellany.Math.Functions.ToDecimal(dim3);
-            //i = new CromulentBisgetti.ContainerPacking.Entities.Item(id, ddim1, ddim2, ddim3, quantity);
             this.ID = id;
             this.Dim1 = dim1; //Miscellany.Math.Functions.ToDouble(i.Dim1);
             this.Dim2 = dim2; //Miscellany.Math.Functions.ToDouble(i.Dim2);

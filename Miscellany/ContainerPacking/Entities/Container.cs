@@ -25,16 +25,12 @@ namespace Miscellany.ContainerPacking.Entities
         /// <summary>
         /// Initializes a new instance of the Container class for Container Packing. Based on David Chapman's 3DContainerPacking library.
         /// </summary>
-        /// <param name="id">The container ID.</param>
-        /// <param name="length">The container length.</param>
-        /// <param name="width">The container width.</param>
-        /// <param name="height">The container height.</param>
+        /// <param name="id">The container ID</param>
+        /// <param name="length">The container length</param>
+        /// <param name="width">The container width</param>
+        /// <param name="height">The container height</param>
         public Container(int id, double length, double width, double height)
         {
-            //decimal dLength = Miscellany.Math.Functions.ToDecimal(length);
-            //decimal dWidth = Miscellany.Math.Functions.ToDecimal(width);
-            //decimal dHeight = Miscellany.Math.Functions.ToDecimal(height);
-            //c = new CromulentBisgetti.ContainerPacking.Entities.Container(id, dLength, dWidth, dHeight);
             this.ID = id;
             this.Length = length; //Miscellany.Math.Functions.ToDouble(c.Length);
             this.Width = width; //Miscellany.Math.Functions.ToDouble(c.Width);
