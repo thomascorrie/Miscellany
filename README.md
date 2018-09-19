@@ -1,4 +1,4 @@
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat)](https://github.com/thomascorrie/Miscellany/CONTRIBUTING.md)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat)](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md)
 
 # Miscellany for Dynamo
 A collection of miscellaneous nodes for [Dynamo](http://www.dynamobim.org/)
@@ -10,7 +10,7 @@ Miscellany contains an implementation of the C# library [3DContainerPacking](htt
 Miscellany is not yet available on the Dynamo package manager
 
 ## Contributing
-Contributions are welcome. Please read CONTRIBUTING.md for details the code of conduct.
+Contributions are welcome. Please read [CONTRIBUTING.md](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md) for details the code of conduct.
 
 ## Prerequisites
 Dynamo 2.0
@@ -20,4 +20,4 @@ Dynamo 2.0
 AGPL-3.0
 
 ## Author
-Thomas Corrie: [GitHub](https://github.com/thomascorrie) [Twitter](https://twitter.com/didymuscoombe) [Website](http://www.thomascorrie.com)
+Thomas Corrie: [GitHub](https://github.com/thomascorrie) - [Twitter](https://twitter.com/didymuscoombe) - [Website](http://www.thomascorrie.com)
