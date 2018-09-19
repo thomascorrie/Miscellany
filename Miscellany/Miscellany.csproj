@@ -72,7 +72,6 @@
     <Compile Include="ContainerPacking\Entities\Container.cs" />
     <Compile Include="ContainerPacking\Entities\Item.cs" />
     <Compile Include="ContainerPacking\PackingService.cs" />
-    <Compile Include="Dictionary\Dictionary.cs" />
     <Compile Include="Math\Functions.cs" />
     <Compile Include="Geometry\Abstract\Abstract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
