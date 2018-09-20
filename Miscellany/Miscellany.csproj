@@ -86,8 +86,10 @@
     <Content Include="Miscellany_DynamoCustomization.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\Icon-128.png" />
-    <None Include="Resources\Icon-32.png" />
+    <None Include="Resources\DefaultCustomNode.Small.png" />
+    <None Include="Resources\DefaultCustomNode.Large.png" />
+    <None Include="Resources\ContainerPacking.PackingService.PackContainer.Small.png" />
+    <None Include="Resources\ContainerPacking.PackingService.PackContainer.Large.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\MiscellanyImages.resx" />
@@ -108,7 +110,7 @@ xcopy /Y "$(ProjectDir)pkg.json" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(
       <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
     </GetAssemblyIdentity>
     <!-- Generate customization dll -->
-    <!-- <GenerateResource UseSourcePath="true" Sources="$(ProjectDir)\Resources\MiscellanyImages.resx" OutputResources="$(ProjectDir)\Resources\MiscellanyImages.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
-    <AL TargetType="library" EmbedResources="$(ProjectDir)\Resources\MiscellanyImages.resources" OutputAssembly="$(OutDir)Miscellany.customization.dll" Version="%(AssemblyInfo.Version)" /> -->
+    <GenerateResource UseSourcePath="true" Sources="$(ProjectDir)\Resources\MiscellanyImages.resx" OutputResources="$(ProjectDir)\Resources\MiscellanyImages.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
+    <AL TargetType="library" EmbedResources="$(ProjectDir)\Resources\MiscellanyImages.resources" OutputAssembly="$(OutDir)Miscellany.customization.dll" Version="%(AssemblyInfo.Version)" />
   </Target>
 </Project>
