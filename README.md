@@ -1,4 +1,4 @@
-![Logo](Graphics\Icon-128.png)
+![Logo](https://github.com/thomascorrie/Miscellany/blob/master/Graphics/Icon-128.png)
 
 # Miscellany for Dynamo
 
