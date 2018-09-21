@@ -1,3 +1,5 @@
+![Logo](Graphics\Icon-128.png)
+
 # Miscellany for Dynamo
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md)

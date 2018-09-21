@@ -86,6 +86,8 @@
     <Content Include="Miscellany_DynamoCustomization.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\ContainerPacking.PackingService.PackContainers.Small.png" />
+    <None Include="Resources\ContainerPacking.PackingService.PackContainers.Large.png" />
     <None Include="Resources\DefaultCustomNode.Small.png" />
     <None Include="Resources\DefaultCustomNode.Large.png" />
     <None Include="Resources\ContainerPacking.PackingService.PackContainer.Small.png" />
