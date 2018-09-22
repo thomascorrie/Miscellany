@@ -23,7 +23,7 @@ namespace Miscellany.ContainerPacking.Entities
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the Container class for Container Packing. Based on David Chapman's 3DContainerPacking library.
+        ///     Initializes a new instance of the Container class for Container Packing. Based on David Chapman's 3DContainerPacking library.
         /// </summary>
         /// <param name="id">The container ID</param>
         /// <param name="length">The container length</param>
@@ -42,7 +42,7 @@ namespace Miscellany.ContainerPacking.Entities
 
         #region Public Properties
         /// <summary>
-        /// Gets or sets the container ID.
+        ///     Gets the container ID.
         /// </summary>
         /// <value>
         /// The container ID.
@@ -50,7 +50,7 @@ namespace Miscellany.ContainerPacking.Entities
         public int ID { get; set; }
 
         /// <summary>
-        /// Gets or sets the container length.
+        ///     Gets the container length.
         /// </summary>
         /// <value>
         /// The container length.
@@ -58,7 +58,7 @@ namespace Miscellany.ContainerPacking.Entities
         public double Length { get; set; }
 
         /// <summary>
-        /// Gets or sets the container width.
+        ///     Gets the container width.
         /// </summary>
         /// <value>
         /// The container width.
@@ -66,7 +66,7 @@ namespace Miscellany.ContainerPacking.Entities
         public double Width { get; set; }
 
         /// <summary>
-        /// Gets or sets the container height.
+        ///     Gets the container height.
         /// </summary>
         /// <value>
         /// The container height.
@@ -74,7 +74,7 @@ namespace Miscellany.ContainerPacking.Entities
         public double Height { get; set; }
 
         /// <summary>
-        /// Gets or sets the volume of the container.
+        ///     Gets the volume of the container.
         /// </summary>
         /// <value>
         /// The volume of the container.

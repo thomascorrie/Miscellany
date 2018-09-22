@@ -10,6 +10,9 @@
     <namespace name="Miscellany.Geometry.Abstract">
       <category>Miscellany.Geometry.Abstract</category>
     </namespace>
+    <namespace name="Miscellany.List">
+      <category>Miscellany.List</category>
+    </namespace>
     <namespace name="Miscellany.Math">
       <category>Miscellany.Math</category>
     </namespace>

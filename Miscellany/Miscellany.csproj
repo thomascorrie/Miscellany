@@ -69,9 +69,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs" />
     <Compile Include="ContainerPacking\Entities\Container.cs" />
     <Compile Include="ContainerPacking\Entities\Item.cs" />
     <Compile Include="ContainerPacking\PackingService.cs" />
+    <Compile Include="List\List.cs" />
     <Compile Include="Math\Functions.cs" />
     <Compile Include="Geometry\Abstract\Abstract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,12 +88,40 @@
     <Content Include="Miscellany_DynamoCustomization.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\ContainerPacking.PackingService.PackContainers.Small.png" />
-    <None Include="Resources\ContainerPacking.PackingService.PackContainers.Large.png" />
-    <None Include="Resources\DefaultCustomNode.Small.png" />
-    <None Include="Resources\DefaultCustomNode.Large.png" />
-    <None Include="Resources\ContainerPacking.PackingService.PackContainer.Small.png" />
-    <None Include="Resources\ContainerPacking.PackingService.PackContainer.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.About.About.Large.png" />
+    <None Include="Resources\Images\Small\Miscellany.About.About.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.About.Small.png" />
+    <None Include="Resources\Images\Large\Miscellany.About.Large.png" />
+    <None Include="Resources\Images\Large\DefaultCustomNode.Large.png" />
+    <None Include="Resources\Images\Small\DefaultCustomNode.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.Small.png" />
+    <None Include="Resources\Images\Large\Miscellany.Large.png" />
+    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Height.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Container.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Width.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Volume.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Length.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.ID.Small.png" />
+    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.ID.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Height.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Container.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Width.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Volume.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Length.Large.png" />
+    <None Include="Resources\Images\Small\Miscellany.Math.Functions.ToDouble..Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.Math.Functions.ToDecimal.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.Math.Functions.RunningTotal.Small.png" />
+    <None Include="Resources\Images\Large\Miscellany.Math.Functions.ToDouble.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.Math.Functions.ToDecimal.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.Math.Functions.RunningTotal.Large.png" />
+    <None Include="Resources\Images\Small\Miscellany.List.PairItems.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.Geometry.Abstract.Vector.Display.Small.png" />
+    <None Include="Resources\Images\Large\Miscellany.List.PairItems.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.Geometry.Abstract.Vector.Display.Large.png" />
+    <None Include="Resources\Images\Small\Miscellany.Geometry.Abstract.CoordinateSystem.Display.Small.png" />
+    <None Include="Resources\Images\Large\Miscellany.Geometry.Abstract.CoordinateSystem.Display.Large.png" />
+    <None Include="Resources\Images\Small\Miscellany.Geometry.Abstract.Plane.Display.Small.png" />
+    <None Include="Resources\Images\Large\Miscellany.Geometry.Abstract.Plane.Display.Large.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\MiscellanyImages.resx" />
