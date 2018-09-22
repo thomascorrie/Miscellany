@@ -1,4 +1,4 @@
-![Logo](https://github.com/thomascorrie/Miscellany/blob/master/Graphics/Icon-128.png)
+![Logo](https://github.com/thomascorrie/Miscellany/blob/master/Miscellany/Resources/Images/Large/Miscellany.About.About.Large.png)
 
 # Miscellany for Dynamo
 
@@ -14,7 +14,7 @@ Miscellany contains an implementation of the C# library [3DContainerPacking](htt
 Miscellany is not yet available on the Dynamo package manager
 
 ## Contributing
-Contributions are welcome. Please read [CONTRIBUTING.md](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md) for details the code of conduct.
+Contributions are welcome. Please read [CONTRIBUTING.md](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md).
 
 ## Prerequisites
 Dynamo 2.0 or later  
