@@ -329,7 +329,7 @@ namespace Miscellany.ContainerPacking
         }
         #endregion
 
-        #region PackContainersWithGroupsResidual
+        #region PackContainersWithGroupsContinuously
 
         /// <summary>
         /// Runs the chosen packing algorithm as a greedy strategy on a list of containers and a list of items to pack. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.
@@ -349,7 +349,7 @@ namespace Miscellany.ContainerPacking
         /// containerpacking
         /// </search>
         [MultiReturn(new[] { "packedItems", "unpackedItems", "isCompletePack", "packTimeInMilliseconds", "totalPackTimeInMilliseconds", "percentContainerVolumePacked", "percentItemVolumePacked" })]
-        public static Dictionary<string, object> PackContainersWithGroupsResidual(List<Miscellany.ContainerPacking.Entities.Container> containers, List<List<Miscellany.ContainerPacking.Entities.Item>> itemsToPack, int algorithm = 1, int minimumBooks = 20)
+        public static Dictionary<string, object> PackContainersWithGroupsContinuously(List<Miscellany.ContainerPacking.Entities.Container> containers, List<List<Miscellany.ContainerPacking.Entities.Item>> itemsToPack, int algorithm = 1, int minimumBooks = 20)
         {
             //Select algorithm using integer
             List<int> algorithms = new List<int> { algorithm };
