@@ -12,7 +12,7 @@ namespace Miscellany.Math
     public static class Functions
     {
         /// <summary>
-        /// Converts a double to a decimal
+        ///     Converts a double to a decimal. If the double is above or below the maximum range for a decimal then the number is bounded to theos limits
         /// </summary>
         /// <param name="number">Input integer or double</param>
         /// <returns name="decimal">Decimal</returns>
@@ -30,7 +30,7 @@ namespace Miscellany.Math
         }
         
         /// <summary>
-        /// Converts a decimal to a double
+        ///     Converts a decimal to a double
         /// </summary>
         /// <param name="inputDecimal">Input decimal</param>
         /// <returns name="double">Double</returns>
@@ -43,7 +43,7 @@ namespace Miscellany.Math
         }
         
         /// <summary>
-        /// Calculates a running total for a list of numbers
+        ///     Calculates a running total for a list of numbers
         /// </summary>
         /// <param name="list">List of doubles</param>
         /// <returns name="list">List of running totals</returns>

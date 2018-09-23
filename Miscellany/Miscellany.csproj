@@ -88,6 +88,8 @@
     <Content Include="Miscellany_DynamoCustomization.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Images\Small\Miscellany.Math.Functions.ToDouble.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.About.About.Large.Small.png" />
     <None Include="Resources\Images\Large\Miscellany.About.About.Large.png" />
     <None Include="Resources\Images\Small\Miscellany.About.About.Small.png" />
     <None Include="Resources\Images\Small\Miscellany.About.Small.png" />
