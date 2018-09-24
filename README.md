@@ -7,7 +7,7 @@
 
 A collection of miscellaneous nodes for [Dynamo 2](http://www.dynamobim.org/)
 
-![Nodes](https://github.com/thomascorrie/Miscellany/blob/master/Miscellany/Samples/Miscellany-Samples-Nodes.png)
+![Nodes](https://github.com/thomascorrie/Miscellany/blob/master/Samples/Miscellany-Samples-Nodes.png)
 
 ## Container Packing
 Miscellany contains an implementation of the C# library [3DContainerPacking](https://github.com/davidmchapman/3DContainerPacking) to use the [EB-AFIT container packing algorithm](https://github.com/wknechtel/3d-bin-pack) in Dynamo
