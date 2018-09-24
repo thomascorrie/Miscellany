@@ -1,4 +1,4 @@
-![Logo](https://github.com/thomascorrie/Miscellany/blob/master/Miscellany/Resources/Images/Large/Miscellany.About.About.Large.png)
+![Logo](https://github.com/thomascorrie/Miscellany/blob/master/Miscellany/Resources/Images/Large/Miscellany.About.Miscellany.Large.png)
 
 # Miscellany for Dynamo
 
