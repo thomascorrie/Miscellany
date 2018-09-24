@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 namespace Miscellany
 {
     /// <summary>
-    /// Modify
+    /// About
     /// </summary>
-    public class About
+    public static class About
     {
         /// <summary>
         ///     About Miscellany. Only to force the logo to be default icon.
         /// </summary>
         /// <returns name="About">Miscellany is a package for Dynamo 2</returns>
         /// <search>
-        /// list, pair
+        /// Miscellany
         /// </search>
-        public About()
+        public static string Miscellany()
         {
+            string version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString();
+            return "This is version " + version + " of Miscellany";
         }
     }
-
 }

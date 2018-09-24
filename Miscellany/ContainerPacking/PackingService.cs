@@ -198,10 +198,10 @@ namespace Miscellany.ContainerPacking
         #region PackContainersWithGroups
 
         /// <summary>
-        /// Runs the chosen packing algorithm as a greedy strategy on a list of containers and a list of items to pack. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.
+        /// Runs the chosen packing algorithm as a greedy strategy on a list of containers and groups of items to pack. When a group of items is exhausted the algorithm moves on to the next container and starts a new group. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.
         /// </summary>
         /// <param name="containers">Containers in order</param>
-        /// <param name="itemsToPack">Items to pack</param>
+        /// <param name="itemsToPack">Lists of Items to pack</param>
         /// <param name="algorithm">Algorithm ID</param>
         /// <returns name="packedItems">Items that were successfully packed</returns>
         /// <returns name="unpackedItems">Items that were not packed</returns>
@@ -332,7 +332,7 @@ namespace Miscellany.ContainerPacking
         #region PackContainersWithGroupsContinuously
 
         /// <summary>
-        /// Runs the chosen packing algorithm as a greedy strategy on a list of containers and a list of items to pack. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.
+        /// Runs the chosen packing algorithm as a greedy strategy on a list of containers and a list of items to pack. When the number of Items in a group dwindles below the minimum number, the difference is made up with Items taken from the next group. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.
         /// </summary>
         /// <param name="containers">Containers in order</param>
         /// <param name="itemsToPack">Items to pack</param>

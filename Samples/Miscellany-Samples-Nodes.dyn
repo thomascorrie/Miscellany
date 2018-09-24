@@ -1,0 +1,2454 @@
+{
+  "Uuid": "ddfaf275-4583-4748-9dda-fd097323796d",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Miscellany-Samples-Nodes",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.About.Miscellany",
+      "Id": "ec4ab63759d14a31bf01f805e198a26f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9ee94959bf1e4cfb8283dc0aaebac0ac",
+          "Name": "About",
+          "Description": "Miscellany is a package for Dynamo 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "About Miscellany. Only to force the logo to be default icon.\n\nAbout.Miscellany ( ): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Container.Container@int,double,double,double",
+      "Id": "21a2f1abb44246b090093642a6ee27a1",
+      "Inputs": [
+        {
+          "Id": "c22c19fbbb4e444d88c53912c4d5b90d",
+          "Name": "id",
+          "Description": "The container ID\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5accb21d7c69409f885eeabf063e4233",
+          "Name": "length",
+          "Description": "The container length\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2371a1cd6f7740d98a42f3c9e7b4a5bf",
+          "Name": "width",
+          "Description": "The container width\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0db6333183424bd88c89a3d254f2bc1b",
+          "Name": "height",
+          "Description": "The container height\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d94fd5f6d77948c5813a0ea872884a17",
+          "Name": "Container",
+          "Description": "Container",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a new Container for Container Packing. Based on David Chapman's 3DContainerPacking library.\n\nContainer.Container (id: int, length: double, width: double, height: double): Container"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Container.Height",
+      "Id": "07983ef022cb455e8f622131fc66b964",
+      "Inputs": [
+        {
+          "Id": "3d0a70e4c6734bddb131604997d6e9c6",
+          "Name": "container",
+          "Description": "Miscellany.ContainerPacking.Entities.Container",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e900af08eef14ec68507c826254ce725",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the container height.\n\nContainer.Height: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Container.ID",
+      "Id": "ff169eb3b44f42818fd33235473601c8",
+      "Inputs": [
+        {
+          "Id": "90082d6045224fa4a7930825cc589c40",
+          "Name": "container",
+          "Description": "Miscellany.ContainerPacking.Entities.Container",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c80b1336497e4147867ee321b141e43f",
+          "Name": "int",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the container ID.\n\nContainer.ID: int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Container.Length",
+      "Id": "29af11031d3e43b49e99f186bcdc444b",
+      "Inputs": [
+        {
+          "Id": "034b50f1ac264653a4e81e8102c346a6",
+          "Name": "container",
+          "Description": "Miscellany.ContainerPacking.Entities.Container",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b6cd7997bbc4489faeec576b9c5e96e8",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the container length.\n\nContainer.Length: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Container.Volume",
+      "Id": "9cec1244fca248969a8696e93409be5e",
+      "Inputs": [
+        {
+          "Id": "56fa98562660412d9236aa48a52bffbe",
+          "Name": "container",
+          "Description": "Miscellany.ContainerPacking.Entities.Container",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b1cbec811e064616a5894cfa42666bb7",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the volume of the container.\n\nContainer.Volume: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Container.Width",
+      "Id": "e719bd5338e341b0946ed3b0e399d27f",
+      "Inputs": [
+        {
+          "Id": "7817abf362ed4450a6fcf1dc18692874",
+          "Name": "container",
+          "Description": "Miscellany.ContainerPacking.Entities.Container",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3b8e03b31c73410b95dbeb7d28f860e0",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the container width.\n\nContainer.Width: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.Item@int,double,double,double,int",
+      "Id": "2974dcac115c41ffb442fdd1daeea5a8",
+      "Inputs": [
+        {
+          "Id": "feb539cadb9649be913c3ea928099ae9",
+          "Name": "id",
+          "Description": "The item ID.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1f0205b226b645acb463fe7f17f3a3de",
+          "Name": "dim1",
+          "Description": "The length of one of the three item dimensions\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "53aa5fe47a3649e89f22263122ea1d99",
+          "Name": "dim2",
+          "Description": "The length of another of the three item dimensions\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "80efc465a3bf42bd88f3c01e4d87d8ff",
+          "Name": "dim3",
+          "Description": "The length of the other of the three item dimensions\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "43dab3bb816b4a50a0d4817d2118c27a",
+          "Name": "quantity",
+          "Description": "The item quantity (the default is 1)\n\nint\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3542ccb52ebb42ed8118a0261fff9e37",
+          "Name": "item",
+          "Description": "Item object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a new Item for Container Packing. Based on David Chapman's 3DContainerPacking library.\n\nItem.Item (id: int, dim1: double, dim2: double, dim3: double, quantity: int = 1): Item"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.CoordX",
+      "Id": "47355bbba02e46278046e3d500f40fb6",
+      "Inputs": [
+        {
+          "Id": "4864c74dd5584795bd2eb60d16af5d0e",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "56671674198c4ab0a95dea55b8da82ba",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the x coordinate of the location of the packed item within the container.\n\nItem.CoordX: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.CoordY",
+      "Id": "6f68fd2833f44db98af952c063630778",
+      "Inputs": [
+        {
+          "Id": "59a0a0b4b7184295bc422bacb32e5c2b",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "23eeb560a8cb4c20a25ef6ef5bae33a7",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the y coordinate of the location of the packed item within the container.\n\nItem.CoordY: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.CoordZ",
+      "Id": "6253645272a741a1a900f447cf52c51a",
+      "Inputs": [
+        {
+          "Id": "55eecad8d42643bb8c6a34a0be168213",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5d361b8dd45d453db0ab53136950c241",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the z coordinate of the location of the packed item within the container.\n\nItem.CoordZ: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.Dim1",
+      "Id": "4b16f4debadb48f1ab79cd25aca8f9a6",
+      "Inputs": [
+        {
+          "Id": "2d8c772e115e465ca10162d9fab6509b",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6250abc1ca2a402abb6c1ac7793b7502",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the length of one of the item dimensions.\n\nItem.Dim1: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.Dim2",
+      "Id": "5f0d8fdd0a2144fe841923b949028894",
+      "Inputs": [
+        {
+          "Id": "461b894db38c48df93ecb3738e3f19d7",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e36ea55f1f084011ad5c6aad72e83134",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the length another of the item dimensions.\n\nItem.Dim2: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.Dim3",
+      "Id": "2fb4562d9fa0424d8ab25fdcdc9f2010",
+      "Inputs": [
+        {
+          "Id": "ecda5e8e706a4671bc1198a463b67e80",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "22b7dbd42f81446997b873df90d8a049",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the third of the item dimensions.\n\nItem.Dim3: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.ID",
+      "Id": "394e589c2eb140d7bb9473804fe610c8",
+      "Inputs": [
+        {
+          "Id": "e61d68b7b4994fc0be85f1b1224b94ec",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c80872ec287b46318bde73d5c2e36427",
+          "Name": "int",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the item ID.\n\nItem.ID: int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.IsPacked",
+      "Id": "c8ad85ce1dbd4965883d2918c11e6cd6",
+      "Inputs": [
+        {
+          "Id": "7c00c1d7825f4bce95cf663a6c1927c5",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "71214fb2965a498e8da6da8b82263f4e",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Indicates whether this item has already been packed.\n\nItem.IsPacked: bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.PackDimX",
+      "Id": "69ddc1c58e1d40eeb202454d88eb38be",
+      "Inputs": [
+        {
+          "Id": "b8a6e3dc820b438f943d189e3510713b",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "35d42fea253944a8ac27e90523e5bba9",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the x dimension of the orientation of the item as it has been packed.\n\nItem.PackDimX: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.PackDimY",
+      "Id": "8124e3cc99c942a3b590a92cdea234b6",
+      "Inputs": [
+        {
+          "Id": "fcc7977966534b28b5b5e62061a8fed3",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "474805f8cc91407c876255231e52fab1",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the y dimension of the orientation of the item as it has been packed.\n\nItem.PackDimY: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.PackDimZ",
+      "Id": "9a55e9a203a34c678eb86b078df394bc",
+      "Inputs": [
+        {
+          "Id": "375dc1786e8c42eabc4d7ac6359c847b",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "02a1af5861304ee6826fb1af0382d1cc",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the z dimension of the orientation of the item as it has been packed.\n\nItem.PackDimZ: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.Quantity",
+      "Id": "6d428ca0602342eaa5d2bb52c84e937e",
+      "Inputs": [
+        {
+          "Id": "79a2de1d727a4bfcb17fce1908cf68e9",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b9cf0555a71d4c0d8d3165036c8b9dc6",
+          "Name": "int",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the item quantity.\n\nItem.Quantity: int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.Entities.Item.Volume",
+      "Id": "18e6d836fe274c2da24fa96a596ecea6",
+      "Inputs": [
+        {
+          "Id": "9da74c2844b243fcaa9d0e4308e38442",
+          "Name": "item",
+          "Description": "Miscellany.ContainerPacking.Entities.Item",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0defd52cdec04806a38ab79d82caf082",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the item volume.\n\nItem.Volume: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.PackingService.PackContainer@var,var[],int",
+      "Id": "dd673115d3514648b0796780dc40545a",
+      "Inputs": [
+        {
+          "Id": "2e791c363d4246b29ba27786411117ba",
+          "Name": "container",
+          "Description": "Container\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9a77404aa035481d947f601075a35de8",
+          "Name": "itemsToPack",
+          "Description": "Items to pack\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6742956c2cb8463391bc1b17d3362f75",
+          "Name": "algorithm",
+          "Description": "Algorithm ID\n\nint\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8ce2e65352f0424a9860d819ec7a9336",
+          "Name": "packedItems",
+          "Description": "Items that were successfully packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8bef775e77dc4ae8af0f4bb26465b738",
+          "Name": "unpackedItems",
+          "Description": "Items that were not packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "36c5b7fe0cc54446b062d69a455b3dd2",
+          "Name": "isCompletePack",
+          "Description": "Are all items packed?",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7d40e615294b402fb693a18e3c73ebde",
+          "Name": "packTimeInMilliseconds",
+          "Description": "Pack time",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b76b7b707ae24149a545d0d8e4251b9e",
+          "Name": "percentContainerVolumePacked",
+          "Description": "Percentage of the container that is packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "17ac9024097447f798e91775415a2e90",
+          "Name": "percentItemVolumePacked",
+          "Description": "Percentage of items packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Runs the chosen packing algorithm given a single container and a list of items to pack. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.\n\nPackingService.PackContainer (container: var, itemsToPack: var[], algorithm: int = 1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.PackingService.PackContainers@var[],var[],int",
+      "Id": "aa12eb193c1041e4a5074bd7c1d1dadd",
+      "Inputs": [
+        {
+          "Id": "d82b98d4273e4f36862a62458bd4a8cb",
+          "Name": "containers",
+          "Description": "Containers in order\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8d4883058d054e6aad659448d407d2dc",
+          "Name": "itemsToPack",
+          "Description": "Items to pack\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "136b9b9c7a6e499fbe398f1951174927",
+          "Name": "algorithm",
+          "Description": "Algorithm ID\n\nint\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cb780889eed549069a54d0f65da2c5f0",
+          "Name": "packedItems",
+          "Description": "Items that were successfully packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a27734b1936340edb809f9ddb0ec1742",
+          "Name": "unpackedItems",
+          "Description": "Items that were not packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8b245764030248229d26ef6ed25e9312",
+          "Name": "isCompletePack",
+          "Description": "Are all items packed?",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "29228d3e4b814a3c8292e7c5f73bc7d5",
+          "Name": "packTimeInMilliseconds",
+          "Description": "Total pack time",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ef370489a9f5434b8db9493b64d2f97b",
+          "Name": "totalPackTimeInMilliseconds",
+          "Description": "Pack time per container",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "30e84b7256e44c53a8604a0a0c7aa490",
+          "Name": "percentContainerVolumePacked",
+          "Description": "Percentage of the container that is packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f920cf88b14c430abb648d83a0fc97e3",
+          "Name": "percentItemVolumePacked",
+          "Description": "Percentage of items packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Runs the chosen packing algorithm as a greedy strategy on a list of containers and a list of items to pack. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.\n\nPackingService.PackContainers (containers: var[], itemsToPack: var[], algorithm: int = 1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.PackingService.PackContainersWithGroups@var[],var[][],int",
+      "Id": "6e599cfb76194f0fbf3644ad33c72914",
+      "Inputs": [
+        {
+          "Id": "7be2ee8ebeac447fbb4aa63672aefd3e",
+          "Name": "containers",
+          "Description": "Containers in order\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab1558b4d1814676ad906456a43d22e2",
+          "Name": "itemsToPack",
+          "Description": "Items to pack\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eec908c7b5c24c14ade3236e1da6af72",
+          "Name": "algorithm",
+          "Description": "Algorithm ID\n\nint\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d7a8d1b55dee4dacbc25ef304863ab2e",
+          "Name": "packedItems",
+          "Description": "Items that were successfully packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0e3bcd7523184d968c89a1596367333a",
+          "Name": "unpackedItems",
+          "Description": "Items that were not packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b65b826ca3164203a2c0e7860da09007",
+          "Name": "isCompletePack",
+          "Description": "Are all items packed?",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "029e7fd6d13d42d1a44544766d094433",
+          "Name": "packTimeInMilliseconds",
+          "Description": "Total pack time",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "720f6d652c72437d8a8f1c09ebae3ccf",
+          "Name": "totalPackTimeInMilliseconds",
+          "Description": "Pack time per container",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6c87f837fc574f03bfcaf53eeaad82c4",
+          "Name": "percentContainerVolumePacked",
+          "Description": "Percentage of the container that is packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7d7307b0faf1434f939e98ca9e8a1118",
+          "Name": "percentItemVolumePacked",
+          "Description": "Percentage of items packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Runs the chosen packing algorithm as a greedy strategy on a list of containers and a list of items to pack. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.\n\nPackingService.PackContainersWithGroups (containers: var[], itemsToPack: var[][], algorithm: int = 1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.ContainerPacking.PackingService.PackContainersWithGroupsContinuously@var[],var[][],int,int",
+      "Id": "4859227276d94775afba40d72adf47f5",
+      "Inputs": [
+        {
+          "Id": "d7fe6b6e02064ac1b3cc8bcaed5af796",
+          "Name": "containers",
+          "Description": "Containers in order\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d034d9a8af6146b2b216ec93991b0d66",
+          "Name": "itemsToPack",
+          "Description": "Items to pack\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "071d2e366b2e49b282b56562ae0eff80",
+          "Name": "algorithm",
+          "Description": "Algorithm ID\n\nint\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4c420ac5be124f848f72ec386da435e5",
+          "Name": "minimumBooks",
+          "Description": "The minimum number of items to consider for a container\n\nint\nDefault value : 20",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "576035e0c1914aeca0a1865f70ef6e40",
+          "Name": "packedItems",
+          "Description": "Items that were successfully packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "10b9c532ff444d808682822d1fa659ea",
+          "Name": "unpackedItems",
+          "Description": "Items that were not packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6e6ae9d596984c418cd7468d26f106d2",
+          "Name": "isCompletePack",
+          "Description": "Are all items packed?",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f73f69c7fef24e11a605f6b73fa2b894",
+          "Name": "packTimeInMilliseconds",
+          "Description": "Total pack time",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f59b39a829b24fb2a7a69436d98daf92",
+          "Name": "totalPackTimeInMilliseconds",
+          "Description": "Pack time per container",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d645973d3ae740aea929633c245fdf1d",
+          "Name": "percentContainerVolumePacked",
+          "Description": "Percentage of the container that is packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0b4770b6d2c648fa97e8bda179e73b38",
+          "Name": "percentItemVolumePacked",
+          "Description": "Percentage of items packed",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Runs the chosen packing algorithm as a greedy strategy on a list of containers and a list of items to pack. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.\n\nPackingService.PackContainersWithGroupsContinuously (containers: var[], itemsToPack: var[][], algorithm: int = 1, minimumBooks: int = 20): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.Geometry.Abstract.CoordinateSystem.Display@Autodesk.DesignScript.Geometry.CoordinateSystem,double",
+      "Id": "301bb91a434549f591e3e5e62182c510",
+      "Inputs": [
+        {
+          "Id": "dc54551609a84174a4ed306cc589dd97",
+          "Name": "coordinateSystem",
+          "Description": "Autodesk.DesignScript.Geometry.CoordinateSystem\n\nCoordinateSystem",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1ec92bba99244dc7b6875a7deb7ecf3b",
+          "Name": "length",
+          "Description": "double\n\ndouble\nDefault value : 1000",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a67824acd03d4b89af150e6ee79f75d0",
+          "Name": "Display",
+          "Description": "GeometryColor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0c0d9380fad2437883fb0fa0d3fa64f3",
+          "Name": "Origin",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2479b177751a4df3ba1a013753c4837e",
+          "Name": "XAxis",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6f93e96884164166a2aeca21a21b4ed3",
+          "Name": "YAxis",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5a44a9ed6ccb4281b2328792c5ddea65",
+          "Name": "ZAxis",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "962352e3ec874503a9895036ac249ac4",
+          "Name": "XYPlane",
+          "Description": "Plane",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "63887bc0a4744c6d892b290fc29a4816",
+          "Name": "YZPlane",
+          "Description": "Plane",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f3aeb60bad634bd8bc6e6604af3e68b7",
+          "Name": "ZXPlane",
+          "Description": "Plane",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Shows scalable lines representing the CoordinateSystem axes and rectangles for the planes\n\nCoordinateSystem.Display (coordinateSystem: CoordinateSystem, length: double = 1000): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.Geometry.Abstract.Plane.Display@Autodesk.DesignScript.Geometry.Plane,double",
+      "Id": "3fe5ee9f98cf42fabc51860546a1f480",
+      "Inputs": [
+        {
+          "Id": "c23d0ffbcb2d44a4b2eb9b073b836976",
+          "Name": "plane",
+          "Description": "Autodesk.DesignScript.Geometry.Plane\n\nPlane",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6b1bf45f974d4df784d769f652205bc7",
+          "Name": "length",
+          "Description": "double\n\ndouble\nDefault value : 1000",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bc34df06e3a94024a11f895814e861e5",
+          "Name": "Display",
+          "Description": "GeometryColor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "119eb5b4fb2042ae8c14c2643b74f7f8",
+          "Name": "Origin",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "41124cac1bf446e4bcc9a460d38f388c",
+          "Name": "XAxis",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cdd0643682ad4928a6a1972ad4311924",
+          "Name": "YAxis",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d2324a4cc82a4d728777b12c0cd49466",
+          "Name": "Normal",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Shows scalable lines representing the axes and a rectangle for the Plane\n\nPlane.Display (plane: Plane, length: double = 1000): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.Geometry.Abstract.Vector.Display@Autodesk.DesignScript.Geometry.Vector,Autodesk.DesignScript.Geometry.Point,double",
+      "Id": "511e78fd7ff14b8c9e493785217d4d26",
+      "Inputs": [
+        {
+          "Id": "44931ad8bd7047f6a1410d5295159635",
+          "Name": "vector",
+          "Description": "Autodesk.DesignScript.Geometry.Vector\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c204ac3ec2da4256af409ecad1ced90a",
+          "Name": "startPoint",
+          "Description": "Autodesk.DesignScript.Geometry.Point\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2a72bac2d59648a3b377cfea9b7bf77b",
+          "Name": "scale",
+          "Description": "double\n\ndouble\nDefault value : 1000",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1478f2ab40ae42cd88739880fe1aa1a7",
+          "Name": "Display",
+          "Description": "GeometryColor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eaf9e37949284c149dc822e0c8725fb3",
+          "Name": "x",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "484758613dea41a0b508c06b43d2c92a",
+          "Name": "y",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "06fd9d74ef294e72995807668b948d60",
+          "Name": "z",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f3943a156b1b43eb81361d9d4b0881c6",
+          "Name": "Length",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Shows a scalable line representing a Vector from a chosen starting point\n\nVector.Display (vector: Vector, startPoint: Point, scale: double = 1000): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.List.PairItems@var[]..[]",
+      "Id": "c016b35dfe91423d994204851633a1ed",
+      "Inputs": [
+        {
+          "Id": "ce6468d4784e4757952147cd52e5619a",
+          "Name": "list",
+          "Description": "List of items to pair\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ae0f42131f7a46f38aff424b47998403",
+          "Name": "list",
+          "Description": "Nested list of paired items",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Pairs items in a list: [a,b,c,d] > [[a,b],[b,c],[c,d]]\n\nList.PairItems (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.Math.Functions.RunningTotal@double[]",
+      "Id": "fbf003a9e3ee40338adc2e8acfd807a8",
+      "Inputs": [
+        {
+          "Id": "86dff2be8c65418f8e75e2751e8ec0c2",
+          "Name": "list",
+          "Description": "List of doubles\n\ndouble[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d07c7b6f077e459cace3b7edbd773a1c",
+          "Name": "list",
+          "Description": "List of running totals",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Calculates a running total for a list of numbers\n\nFunctions.RunningTotal (list: double[]): double[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.Math.Functions.ToDecimal@double",
+      "Id": "583e6ceedceb450887fd1a04a3c5b009",
+      "Inputs": [
+        {
+          "Id": "f397d60400234c3d950576c71be5d59a",
+          "Name": "number",
+          "Description": "Input integer or double\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "af452b4c3591405e9fb00215626c2096",
+          "Name": "decimal",
+          "Description": "Decimal",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Converts a double to a decimal. If the double is above or below the maximum range for a decimal then the number is bounded to theos limits\n\nFunctions.ToDecimal (number: double): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.Math.Functions.ToDouble@var",
+      "Id": "d9752865e637474897fd032d3b9d6576",
+      "Inputs": [
+        {
+          "Id": "578ab6a6f0a64a82b75a15ae10e3c05d",
+          "Name": "inputDecimal",
+          "Description": "Input decimal\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c7985fe6ec5949ce99724795435fa6f9",
+          "Name": "double",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Converts a decimal to a double\n\nFunctions.ToDouble (inputDecimal: var): double"
+    }
+  ],
+  "Connectors": [],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -29.95482477368672,
+      "EyeY": 90.556902917320571,
+      "EyeZ": 32.401764910182656,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "About.Miscellany",
+        "Id": "ec4ab63759d14a31bf01f805e198a26f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 246.12369414309126,
+        "Y": 170.25783514145166
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Container.Container",
+        "Id": "21a2f1abb44246b090093642a6ee27a1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 457.34353511375184,
+        "Y": 168.25604622538356
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Container.Height",
+        "Id": "07983ef022cb455e8f622131fc66b964",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 457.34353511375184,
+        "Y": 420.43020198226657
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Container.ID",
+        "Id": "ff169eb3b44f42818fd33235473601c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 457.34353511375184,
+        "Y": 520.8469771751885
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Container.Length",
+        "Id": "29af11031d3e43b49e99f186bcdc444b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 457.34353511375184,
+        "Y": 621.26375236811054
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Container.Volume",
+        "Id": "9cec1244fca248969a8696e93409be5e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 457.34353511375184,
+        "Y": 721.68052756103259
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Container.Width",
+        "Id": "e719bd5338e341b0946ed3b0e399d27f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 457.34353511375184,
+        "Y": 822.09730275395464
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.Item",
+        "Id": "2974dcac115c41ffb442fdd1daeea5a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 716.45786086629846,
+        "Y": 167.71194180612736
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.CoordX",
+        "Id": "47355bbba02e46278046e3d500f40fb6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 716.12595695421828,
+        "Y": 446.42231608209829
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.CoordY",
+        "Id": "6f68fd2833f44db98af952c063630778",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 716.12595695421828,
+        "Y": 536.57360833709993
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.CoordZ",
+        "Id": "6253645272a741a1a900f447cf52c51a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 716.12595695421828,
+        "Y": 626.72490059210156
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.Dim1",
+        "Id": "4b16f4debadb48f1ab79cd25aca8f9a6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 716.12595695421828,
+        "Y": 716.8761928471032
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.Dim2",
+        "Id": "5f0d8fdd0a2144fe841923b949028894",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 716.12595695421828,
+        "Y": 807.02748510210483
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.Dim3",
+        "Id": "2fb4562d9fa0424d8ab25fdcdc9f2010",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 716.12595695421828,
+        "Y": 897.17877735710647
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.ID",
+        "Id": "394e589c2eb140d7bb9473804fe610c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 715.47580531916014,
+        "Y": 991.400355653822
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.IsPacked",
+        "Id": "c8ad85ce1dbd4965883d2918c11e6cd6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 937.36348831398959,
+        "Y": 449.10531793553696
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.PackDimX",
+        "Id": "69ddc1c58e1d40eeb202454d88eb38be",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 937.36348831398959,
+        "Y": 539.25661019053859
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.PackDimY",
+        "Id": "8124e3cc99c942a3b590a92cdea234b6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 937.36348831398959,
+        "Y": 629.40790244554023
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.PackDimZ",
+        "Id": "9a55e9a203a34c678eb86b078df394bc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 937.36348831398959,
+        "Y": 719.55919470054187
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.Quantity",
+        "Id": "6d428ca0602342eaa5d2bb52c84e937e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 937.36348831398959,
+        "Y": 809.7104869555435
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Item.Volume",
+        "Id": "18e6d836fe274c2da24fa96a596ecea6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 937.36348831398959,
+        "Y": 899.86177921054525
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PackingService.PackContainer",
+        "Id": "dd673115d3514648b0796780dc40545a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1164.8059000200476,
+        "Y": 169.32688475927182
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PackingService.PackContainers",
+        "Id": "aa12eb193c1041e4a5074bd7c1d1dadd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1166.2697914237986,
+        "Y": 403.62378257741358
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PackingService.PackContainersWithGroups",
+        "Id": "6e599cfb76194f0fbf3644ad33c72914",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1168.3617694604234,
+        "Y": 660.05347425885884
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PackingService.PackContainersWithGroupsContinuously",
+        "Id": "4859227276d94775afba40d72adf47f5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1168.5655570695187,
+        "Y": 917.239205782588
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CoordinateSystem.Display",
+        "Id": "301bb91a434549f591e3e5e62182c510",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1612.8963982544476,
+        "Y": 169.17997239266998
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Plane.Display",
+        "Id": "3fe5ee9f98cf42fabc51860546a1f480",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1615.4596342000277,
+        "Y": 447.67232810972797
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.Display",
+        "Id": "511e78fd7ff14b8c9e493785217d4d26",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1615.8259399743877,
+        "Y": 645.7514327227
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.PairItems",
+        "Id": "c016b35dfe91423d994204851633a1ed",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1922.52735400078,
+        "Y": 168.24969749835225
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Functions.RunningTotal",
+        "Id": "fbf003a9e3ee40338adc2e8acfd807a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2113.6536206651244,
+        "Y": 167.99384608004965
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Functions.ToDecimal",
+        "Id": "583e6ceedceb450887fd1a04a3c5b009",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2113.6536206651244,
+        "Y": 262.36117667432126
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Functions.ToDouble",
+        "Id": "d9752865e637474897fd032d3b9d6576",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2113.6536206651244,
+        "Y": 360.30602620957319
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "722494aed1ca447c9ed85d9da3ae92f8",
+        "Title": "ContainerPacking",
+        "Nodes": [
+          "5d1b5d22102b47e9b37054275f73459c",
+          "2f7dcd689868459b8aa09e68d409858a"
+        ],
+        "Left": 449.54500016294969,
+        "Top": -138.32740691143209,
+        "Width": 1138.8664521710887,
+        "Height": 114.63017021309776,
+        "FontSize": 48.0,
+        "InitialTop": -70.327406911432092,
+        "InitialHeight": 77.099910798906421,
+        "TextblockHeight": 58.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "27bba822d51d4ceaa57e410570034016",
+        "Title": "⚡",
+        "Nodes": [
+          "dd673115d3514648b0796780dc40545a",
+          "aa12eb193c1041e4a5074bd7c1d1dadd",
+          "6e599cfb76194f0fbf3644ad33c72914",
+          "4859227276d94775afba40d72adf47f5"
+        ],
+        "Left": 1154.8059000200476,
+        "Top": 101.32688475927182,
+        "Width": 434.75965704947112,
+        "Height": 1064.9123210233161,
+        "FontSize": 48.0,
+        "InitialTop": 169.32688475927182,
+        "InitialHeight": 253.0,
+        "TextblockHeight": 58.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "45b142a2160b406b81eebb65f88ec26d",
+        "Title": "+",
+        "Nodes": [
+          "21a2f1abb44246b090093642a6ee27a1"
+        ],
+        "Left": 447.34353511375184,
+        "Top": 100.25604622538356,
+        "Width": 237.0,
+        "Height": 239.0,
+        "FontSize": 48.0,
+        "InitialTop": 168.25604622538356,
+        "InitialHeight": 201.0,
+        "TextblockHeight": 58.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "fd40378a226042cabcabf11803636b2b",
+        "Title": "+",
+        "Nodes": [
+          "2974dcac115c41ffb442fdd1daeea5a8"
+        ],
+        "Left": 706.45786086629846,
+        "Top": 99.711941806127356,
+        "Width": 216.0,
+        "Height": 265.0,
+        "FontSize": 48.0,
+        "InitialTop": 167.71194180612736,
+        "InitialHeight": 227.0,
+        "TextblockHeight": 58.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "82a064107c774a929125580eb6b5d03c",
+        "Title": "?",
+        "Nodes": [
+          "07983ef022cb455e8f622131fc66b964",
+          "ff169eb3b44f42818fd33235473601c8",
+          "29af11031d3e43b49e99f186bcdc444b",
+          "9cec1244fca248969a8696e93409be5e",
+          "e719bd5338e341b0946ed3b0e399d27f"
+        ],
+        "Left": 447.34353511375184,
+        "Top": 352.43020198226657,
+        "Width": 239.0,
+        "Height": 562.66710077168807,
+        "FontSize": 48.0,
+        "InitialTop": 420.43020198226657,
+        "InitialHeight": 524.66710077168818,
+        "TextblockHeight": 58.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "4b319ec5d5dc4449a1f447c537357203",
+        "Title": "?",
+        "Nodes": [
+          "47355bbba02e46278046e3d500f40fb6",
+          "6f68fd2833f44db98af952c063630778",
+          "6253645272a741a1a900f447cf52c51a",
+          "4b16f4debadb48f1ab79cd25aca8f9a6",
+          "5f0d8fdd0a2144fe841923b949028894",
+          "2fb4562d9fa0424d8ab25fdcdc9f2010",
+          "394e589c2eb140d7bb9473804fe610c8",
+          "c8ad85ce1dbd4965883d2918c11e6cd6",
+          "69ddc1c58e1d40eeb202454d88eb38be",
+          "8124e3cc99c942a3b590a92cdea234b6",
+          "9a55e9a203a34c678eb86b078df394bc",
+          "6d428ca0602342eaa5d2bb52c84e937e",
+          "18e6d836fe274c2da24fa96a596ecea6"
+        ],
+        "Left": 705.47580531916014,
+        "Top": 378.42231608209829,
+        "Width": 429.88768299482945,
+        "Height": 705.97803957172368,
+        "FontSize": 48.0,
+        "InitialTop": 446.42231608209829,
+        "InitialHeight": 667.97803957172368,
+        "TextblockHeight": 58.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "64e749a9565841fc94285672fc79bec1",
+        "Title": "Container",
+        "Nodes": [
+          "f505153fe431430099e6a4f24f605bef",
+          "f5daed441a404ff0819cf4f89ecaa31d"
+        ],
+        "Left": 447.21272307323238,
+        "Top": -9.4979157517282147,
+        "Width": 234.2297406536502,
+        "Height": 97.967707826628441,
+        "FontSize": 36.0,
+        "InitialTop": 43.502084248271785,
+        "InitialHeight": 142.63017021309776,
+        "TextblockHeight": 43.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "efc90f42f2674bdaaa483ed82f879898",
+        "Title": "Item",
+        "Nodes": [
+          "911e165031b34536b27c59d0ea0461a3",
+          "c1dd1eefad6b4b70a10825a792fbe3c8"
+        ],
+        "Left": 708.09231327276007,
+        "Top": -12.027183240090437,
+        "Width": 432.062764643503,
+        "Height": 99.630170213097756,
+        "FontSize": 36.0,
+        "InitialTop": 40.972816759909563,
+        "InitialHeight": 140.96770782662844,
+        "TextblockHeight": 43.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "6707d45e90754de688a2c775b2cb5266",
+        "Title": "Algorithms",
+        "Nodes": [
+          "dd8db09e47384114ba4c4e5a015a93cd",
+          "073f875d2ce54abf8d2d88d1728a2724"
+        ],
+        "Left": 1155.1929164380388,
+        "Top": -10.238592447701706,
+        "Width": 433.0914577559497,
+        "Height": 97.694754559840874,
+        "FontSize": 36.0,
+        "InitialTop": 42.761407552298294,
+        "InitialHeight": 140.96770782662844,
+        "TextblockHeight": 43.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "9d933bfa5b134710bc320391daf6871c",
+        "Title": "About",
+        "Nodes": [
+          "6e2890ee6a8d47bbaee4224d3d872cfd",
+          "148ec58117d24d76b031f2b3935de374"
+        ],
+        "Left": 230.94144985562309,
+        "Top": -137.8463791451494,
+        "Width": 205.16872036227869,
+        "Height": 116.28229569175,
+        "FontSize": 48.0,
+        "InitialTop": -69.8463791451494,
+        "InitialHeight": 142.63017021309776,
+        "TextblockHeight": 58.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "de855a08ae93410dbb9b12612350868e",
+        "Title": "⚡",
+        "Nodes": [
+          "ec4ab63759d14a31bf01f805e198a26f"
+        ],
+        "Left": 236.12369414309126,
+        "Top": 102.25783514145166,
+        "Width": 137.0,
+        "Height": 161.0,
+        "FontSize": 48.0,
+        "InitialTop": 170.25783514145166,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 58.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "dedb54054fec4f15a3c583815591ae6b",
+        "Title": "Geometry",
+        "Nodes": [
+          "82c893a7b2b0477f80e9d59643422568",
+          "2c688fc9c4204d759be2465af5920cbc"
+        ],
+        "Left": 1603.490647319808,
+        "Top": -136.19085309463924,
+        "Width": 297.01750709320595,
+        "Height": 112.23069963304968,
+        "FontSize": 48.0,
+        "InitialTop": -68.190853094639252,
+        "InitialHeight": 142.630170213098,
+        "TextblockHeight": 58.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "d93d39426397495f90d139707ea3edcf",
+        "Title": "Abstract",
+        "Nodes": [
+          "d3bc0289000f494bbf181a5825a5a7e3",
+          "38f3ac14dcb741a89ef0b849b5715e2e"
+        ],
+        "Left": 1603.4338413442017,
+        "Top": -10.36774747633055,
+        "Width": 297.16045669091591,
+        "Height": 97.6947545598409,
+        "FontSize": 36.0,
+        "InitialTop": 42.63225252366945,
+        "InitialHeight": 140.694754559841,
+        "TextblockHeight": 43.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "054c773739da443493fa0db0609db287",
+        "Title": "⚡",
+        "Nodes": [
+          "301bb91a434549f591e3e5e62182c510",
+          "3fe5ee9f98cf42fabc51860546a1f480",
+          "511e78fd7ff14b8c9e493785217d4d26"
+        ],
+        "Left": 1602.8963982544476,
+        "Top": 101.17997239266998,
+        "Width": 297.0,
+        "Height": 741.57146033003,
+        "FontSize": 48.0,
+        "InitialTop": 169.17997239266998,
+        "InitialHeight": 722.242189206814,
+        "TextblockHeight": 58.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "a414137799f8487f8f2d5ca24fde75b4",
+        "Title": "List",
+        "Nodes": [
+          "ff1f39165fe44c9aae060cc66b051329",
+          "7b2bca23bd3349d380c479efaa5793c3"
+        ],
+        "Left": 1911.8675644037125,
+        "Top": -139.46409181396439,
+        "Width": 175.21402143704245,
+        "Height": 114.95685884167492,
+        "FontSize": 48.0,
+        "InitialTop": -71.464091813964387,
+        "InitialHeight": 140.23069963304965,
+        "TextblockHeight": 58.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "34c0eff821904dbab0d76b0fb957236d",
+        "Title": "⚡",
+        "Nodes": [
+          "c016b35dfe91423d994204851633a1ed"
+        ],
+        "Left": 1912.52735400078,
+        "Top": 100.24969749835225,
+        "Width": 173.0,
+        "Height": 161.0,
+        "FontSize": 48.0,
+        "InitialTop": 168.24969749835225,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 58.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "b12a8ab72ee343349139c70719a2a33e",
+        "Title": "Math",
+        "Nodes": [
+          "cef7b4d4cbe1433cbec3d46da4cf0cb6",
+          "de74402922994683abb9c7d56fe3cd02"
+        ],
+        "Left": 2099.4966593618315,
+        "Top": -139.72985067749823,
+        "Width": 267.0596325037618,
+        "Height": 113.55805983744045,
+        "FontSize": 48.0,
+        "InitialTop": -71.729850677498234,
+        "InitialHeight": 141.55805983744045,
+        "TextblockHeight": 58.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "f3e05a5aa3be4959ace571a6e4def9a9",
+        "Title": "Functions",
+        "Nodes": [
+          "1f5a432e381b41f98bb62ba362f3b559",
+          "cab86f8be715436b9172174a118f6c84"
+        ],
+        "Left": 2100.1465425937968,
+        "Top": -10.214478729917062,
+        "Width": 265.41382263098103,
+        "Height": 98.094004910649289,
+        "FontSize": 36.0,
+        "InitialTop": 42.785521270082938,
+        "InitialHeight": 140.69475455984087,
+        "TextblockHeight": 43.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "479a70037adb4d57a47f38d35a8801d4",
+        "Title": "⚡",
+        "Nodes": [
+          "fbf003a9e3ee40338adc2e8acfd807a8",
+          "583e6ceedceb450887fd1a04a3c5b009",
+          "d9752865e637474897fd032d3b9d6576"
+        ],
+        "Left": 2103.6536206651244,
+        "Top": 99.99384608004965,
+        "Width": 262.0,
+        "Height": 353.31218012952354,
+        "FontSize": 48.0,
+        "InitialTop": 167.99384608004965,
+        "InitialHeight": 315.31218012952354,
+        "TextblockHeight": 58.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "5d1b5d22102b47e9b37054275f73459c",
+        "Title": "",
+        "Nodes": [],
+        "Left": 459.54500016294969,
+        "Top": -67.697236698334336,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "2f7dcd689868459b8aa09e68d409858a",
+        "Title": "",
+        "Nodes": [],
+        "Left": 1528.4114523340384,
+        "Top": -70.327406911432092,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "f505153fe431430099e6a4f24f605bef",
+        "Title": "",
+        "Nodes": [],
+        "Left": 457.21272307323238,
+        "Top": 44.469792074900226,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "f5daed441a404ff0819cf4f89ecaa31d",
+        "Title": "",
+        "Nodes": [],
+        "Left": 621.44246372688258,
+        "Top": 43.502084248271785,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "911e165031b34536b27c59d0ea0461a3",
+        "Title": "",
+        "Nodes": [],
+        "Left": 718.09231327276007,
+        "Top": 43.602986973007319,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "c1dd1eefad6b4b70a10825a792fbe3c8",
+        "Title": "",
+        "Nodes": [],
+        "Left": 1080.1550779162631,
+        "Top": 40.972816759909563,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "dd8db09e47384114ba4c4e5a015a93cd",
+        "Title": "",
+        "Nodes": [],
+        "Left": 1165.1929164380388,
+        "Top": 42.761407552298294,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "073f875d2ce54abf8d2d88d1728a2724",
+        "Title": "",
+        "Nodes": [],
+        "Left": 1528.2843741939885,
+        "Top": 43.456162112139168,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "6e2890ee6a8d47bbaee4224d3d872cfd",
+        "Title": "",
+        "Nodes": [],
+        "Left": 240.94144985562309,
+        "Top": -65.5640834533994,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "148ec58117d24d76b031f2b3935de374",
+        "Title": "",
+        "Nodes": [],
+        "Left": 376.11017021790178,
+        "Top": -69.8463791451494,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "82c893a7b2b0477f80e9d59643422568",
+        "Title": "",
+        "Nodes": [],
+        "Left": 1613.490647319808,
+        "Top": -67.960153461589556,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "2c688fc9c4204d759be2465af5920cbc",
+        "Title": "",
+        "Nodes": [],
+        "Left": 1840.5081544130139,
+        "Top": -68.190853094639252,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d3bc0289000f494bbf181a5825a5a7e3",
+        "Title": "",
+        "Nodes": [],
+        "Left": 1613.4338413442017,
+        "Top": 42.63225252366945,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "38f3ac14dcb741a89ef0b849b5715e2e",
+        "Title": "",
+        "Nodes": [],
+        "Left": 1840.5942980351176,
+        "Top": 43.327007083510352,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ff1f39165fe44c9aae060cc66b051329",
+        "Title": "",
+        "Nodes": [],
+        "Left": 1921.8675644037125,
+        "Top": -71.464091813964387,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "7b2bca23bd3349d380c479efaa5793c3",
+        "Title": "",
+        "Nodes": [],
+        "Left": 2027.081585840755,
+        "Top": -68.507232972289472,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "cef7b4d4cbe1433cbec3d46da4cf0cb6",
+        "Title": "",
+        "Nodes": [],
+        "Left": 2109.4966593618315,
+        "Top": -71.729850677498234,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "de74402922994683abb9c7d56fe3cd02",
+        "Title": "",
+        "Nodes": [],
+        "Left": 2306.5562918655933,
+        "Top": -70.171790840057781,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "1f5a432e381b41f98bb62ba362f3b559",
+        "Title": "",
+        "Nodes": [],
+        "Left": 2110.1465425937968,
+        "Top": 43.879526180732228,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "cab86f8be715436b9172174a118f6c84",
+        "Title": "",
+        "Nodes": [],
+        "Left": 2305.5603652247778,
+        "Top": 42.785521270082938,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -142.88076904081021,
+    "Y": 116.71419340850809,
+    "Zoom": 0.71752190893017287
+  }
+}

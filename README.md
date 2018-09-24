@@ -7,6 +7,8 @@
 
 A collection of miscellaneous nodes for [Dynamo 2](http://www.dynamobim.org/)
 
+![Nodes](https://github.com/thomascorrie/Miscellany/blob/master/Miscellany/Samples/Miscellany-Samples-Nodes.png)
+
 ## Container Packing
 Miscellany contains an implementation of the C# library [3DContainerPacking](https://github.com/davidmchapman/3DContainerPacking) to use the [EB-AFIT container packing algorithm](https://github.com/wknechtel/3d-bin-pack) in Dynamo
 
@@ -14,7 +16,7 @@ Miscellany contains an implementation of the C# library [3DContainerPacking](htt
 Miscellany is not yet available on the Dynamo package manager
 
 ## Contributing
-Contributions are welcome. Please read [CONTRIBUTING.md](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md).
+Contributions are welcome: [CONTRIBUTING.md](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md).
 
 ## Prerequisites
 Dynamo 2.0 or later  
