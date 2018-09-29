@@ -19,7 +19,11 @@ See the [Project Wiki](https://github.com/thomascorrie/Miscellany/wiki) for docu
 See the [Project Board](https://github.com/thomascorrie/Miscellany/projects/1) for planned improvements and open issues.
 
 ## Contributing
-Contributions are welcome: [CONTRIBUTING.md](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md). Pull requests should made to the develop branch.
+Contributions are welcome: [CONTRIBUTING.md](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md). 
+1. Fork this repository
+2. Create a feature branch, e.g. feature/myFeature
+3. Commit your changes and bush to your branch
+4. Create a new pull request
 
 ## Prerequisites
 Dynamo 2.0 or later  
