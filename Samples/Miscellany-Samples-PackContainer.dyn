@@ -191,12 +191,12 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "1;\n200;\n800;\n300;",
+      "Code": "1;\n500;\n400;\n300;",
       "Id": "92f82f2021214174a357e6989d5d1336",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "21050326a2134051b694f62f8682dcdd",
+          "Id": "f78d689aa9ed45b89dd1db86daf21c98",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -205,7 +205,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "84a550cf06544f5caf76e90ad2cf2730",
+          "Id": "f984a1db969f4dd8aae38043ff8c71e9",
           "Name": "",
           "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
@@ -214,7 +214,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "e909ec529407490ca4a240b3fee9e1cc",
+          "Id": "0b802893a3c04b46b76ecab96e5cd99b",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -223,7 +223,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "5a11e0178891405595212291945b4d40",
+          "Id": "82c43fba88ab4777af1cbbecb142eb14",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -948,153 +948,6 @@
       ],
       "Replication": "Auto",
       "Description": "The underlying Curve making up the Edge\n\nEdge.CurveGeometry: Curve"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
-      "Id": "045cf619df40459396a18d479549db41",
-      "Inputs": [
-        {
-          "Id": "43a5a104f7bc4a089d0435402ecfc4c8",
-          "Name": "x",
-          "Description": "double\nDefault value : 0",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "6a3b9823664f444595b5780dc0450425",
-          "Name": "y",
-          "Description": "double\nDefault value : 0",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "87a58d25bba84528bed1eb461923346c",
-          "Name": "z",
-          "Description": "double\nDefault value : 0",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "196af110e4b64b00bf05ba4f2ef79f59",
-          "Name": "Point",
-          "Description": "Point",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByCorners@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
-      "Id": "e585c8ce185345dbb5ff90fb17c21058",
-      "Inputs": [
-        {
-          "Id": "1670bfec58fd43af974f5ee91678a0a7",
-          "Name": "lowPoint",
-          "Description": "Point\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "ce19e3d851da45e6a27ffd40791a1dd1",
-          "Name": "highPoint",
-          "Description": "Point\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(1, 1, 1)",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "6cdf5d01f93c4f7d80810193295a2ee8",
-          "Name": "Cuboid",
-          "Description": "Cuboid",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "Create an Cuboid spanning from low Point to high Point.\n\nCuboid.ByCorners (lowPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), highPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(1, 1, 1)): Cuboid"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Edges",
-      "Id": "305be0c76f1b4006ac4df86948418929",
-      "Inputs": [
-        {
-          "Id": "c93dc0da19394dd693638df18f552006",
-          "Name": "topology",
-          "Description": "Autodesk.DesignScript.Geometry.Topology",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "80a58fda90a34ec9bb532ff7ceccbfbf",
-          "Name": "Edge[]",
-          "Description": "Edge[]",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "The Edges of the Topology\n\nTopology.Edges: Edge[]"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "Autodesk.DesignScript.Geometry.Edge.CurveGeometry",
-      "Id": "490ff2a303204fc6aca48de513a0327d",
-      "Inputs": [
-        {
-          "Id": "10d739550ce84873b0512d66641ee30c",
-          "Name": "edge",
-          "Description": "Autodesk.DesignScript.Geometry.Edge",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "aa49a02f751645f09694185d37db4357",
-          "Name": "Curve",
-          "Description": "Curve",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "The underlying Curve making up the Edge\n\nEdge.CurveGeometry: Curve"
     }
   ],
   "Connectors": [
@@ -1139,39 +992,24 @@
       "Id": "c1429b61584044f19fa0b9f702bf9818"
     },
     {
-      "Start": "21050326a2134051b694f62f8682dcdd",
+      "Start": "f78d689aa9ed45b89dd1db86daf21c98",
       "End": "668541897e7f485ebcd21fc988ef1186",
-      "Id": "38935eae10bf48a6821bb9d8acbe46a2"
+      "Id": "42017234152e4d399bf66e3bbe99ff20"
     },
     {
-      "Start": "84a550cf06544f5caf76e90ad2cf2730",
+      "Start": "f984a1db969f4dd8aae38043ff8c71e9",
       "End": "4c9d051d91df4866a47c71f8a668442d",
-      "Id": "7cef1e68d74941608b372303d30ed6fd"
+      "Id": "1129e5011ddb43c4804d5350522dd50f"
     },
     {
-      "Start": "84a550cf06544f5caf76e90ad2cf2730",
-      "End": "43a5a104f7bc4a089d0435402ecfc4c8",
-      "Id": "eac9e7e7859240b7872795b49b8998eb"
-    },
-    {
-      "Start": "e909ec529407490ca4a240b3fee9e1cc",
-      "End": "6a3b9823664f444595b5780dc0450425",
-      "Id": "3bda1e040105417e965e53d8e5d248ad"
-    },
-    {
-      "Start": "e909ec529407490ca4a240b3fee9e1cc",
-      "End": "73a491b0452745a89b1dfabd5ce7ce6f",
-      "Id": "b2b694d001b9407b82167de1d8981b33"
-    },
-    {
-      "Start": "5a11e0178891405595212291945b4d40",
-      "End": "87a58d25bba84528bed1eb461923346c",
-      "Id": "d11b537635ee48f38cb997669a9fcc40"
-    },
-    {
-      "Start": "5a11e0178891405595212291945b4d40",
+      "Start": "0b802893a3c04b46b76ecab96e5cd99b",
       "End": "39ee8c4a665440dda7b3c51299f7b9fb",
-      "Id": "384c0a4ac99641e781934ea31e93c554"
+      "Id": "cfec4b73c9554d0795a39d6b466f8fbf"
+    },
+    {
+      "Start": "82c43fba88ab4777af1cbbecb142eb14",
+      "End": "73a491b0452745a89b1dfabd5ce7ce6f",
+      "Id": "7488a3afd9754bbbb9a58eeffb1b2cea"
     },
     {
       "Start": "400036f99380419984ff2a50761120e3",
@@ -1297,21 +1135,6 @@
       "Start": "573a95f6ef78474785091de08d8a6f4c",
       "End": "fba7d623af6542d78454e0b11c79e08c",
       "Id": "c300c65d89eb444b83d6b7dc8f2d9292"
-    },
-    {
-      "Start": "196af110e4b64b00bf05ba4f2ef79f59",
-      "End": "ce19e3d851da45e6a27ffd40791a1dd1",
-      "Id": "9043be1329c94b148856dc9f8f220260"
-    },
-    {
-      "Start": "6cdf5d01f93c4f7d80810193295a2ee8",
-      "End": "c93dc0da19394dd693638df18f552006",
-      "Id": "f170486765b04c73988bb93b00124c98"
-    },
-    {
-      "Start": "80a58fda90a34ec9bb532ff7ceccbfbf",
-      "End": "10d739550ce84873b0512d66641ee30c",
-      "Id": "ce25df46f4784f50a376acb8c8a8b754"
     }
   ],
   "Dependencies": [],
@@ -1327,15 +1150,15 @@
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": 755.48447023147185,
-      "EyeY": 516.51241577131282,
-      "EyeZ": -1747.8494274417922,
-      "LookX": -770.07260118493275,
-      "LookY": -85.3627852080885,
-      "LookZ": 1223.3578664277543,
-      "UpX": 0.083335652732084431,
-      "UpY": 0.98768834059514521,
-      "UpZ": -0.13238923988051793
+      "EyeX": -342.34796023055389,
+      "EyeY": 423.08179820158335,
+      "EyeZ": 925.98189942171757,
+      "LookX": 766.63729724422137,
+      "LookY": -160.90006677912316,
+      "LookZ": -1217.9004509931942,
+      "UpX": -0.055684325786209937,
+      "UpY": 0.9945218953682825,
+      "UpZ": 0.088461604636320912
     },
     "NodeViews": [
       {
@@ -1375,8 +1198,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 500.18553849827515,
-        "Y": 344.08900064346767
+        "X": 536.40161359721435,
+        "Y": 340.61556616223749
       },
       {
         "ShowGeometry": true,
@@ -1545,8 +1368,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 3002.81572765131,
-        "Y": 691.71537986246085
+        "X": 3001.8203343388318,
+        "Y": 690.71998654998254
       },
       {
         "ShowGeometry": true,
@@ -1567,46 +1390,6 @@
         "Excluded": false,
         "X": 3042.4651152673273,
         "Y": 272.19980016564767
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Point.ByCoordinates",
-        "Id": "045cf619df40459396a18d479549db41",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 734.66173580674968,
-        "Y": -263.63476011956749
-      },
-      {
-        "ShowGeometry": false,
-        "Name": "Cuboid.ByCorners",
-        "Id": "e585c8ce185345dbb5ff90fb17c21058",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 931.47185543340538,
-        "Y": -288.90102785286251
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Topology.Edges",
-        "Id": "305be0c76f1b4006ac4df86948418929",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 1192.5798336371454,
-        "Y": -288.24710980216048
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Edge.CurveGeometry",
-        "Id": "490ff2a303204fc6aca48de513a0327d",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 1441.6460039982653,
-        "Y": -288.24710980216048
       }
     ],
     "Annotations": [
@@ -1803,8 +1586,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 119.75463185976668,
-    "Y": 393.89736459870767,
-    "Zoom": 0.43074169272536439
+    "X": -65.230522016546018,
+    "Y": 175.11675890703896,
+    "Zoom": 0.45009955791703088
   }
 }
