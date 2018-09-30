@@ -38,9 +38,9 @@ namespace Miscellany.ContainerPacking.Entities
         public Item(int id, double dim1, double dim2, double dim3, int quantity = 1)
         {
             this.ID = id;
-            this.Dim1 = dim1; //Miscellany.Math.Functions.ToDouble(i.Dim1);
-            this.Dim2 = dim2; //Miscellany.Math.Functions.ToDouble(i.Dim2);
-            this.Dim3 = dim3; //Miscellany.Math.Functions.ToDouble(i.Dim3);
+            this.Dim1 = dim1;
+            this.Dim2 = dim2;
+            this.Dim3 = dim3;
             this.volume = dim1 * dim2 * dim3;
             this.Quantity = quantity;
         }
