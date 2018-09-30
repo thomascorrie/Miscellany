@@ -32,19 +32,13 @@ namespace Miscellany.ContainerPacking
         public static Dictionary<string, object> PackContainer(Miscellany.ContainerPacking.Entities.Container container, List<Miscellany.ContainerPacking.Entities.Item> itemsToPack, int algorithm = 1)
         {
             //Create CromulentBisgetti Container
-            decimal dLength = Miscellany.Math.Functions.ToDecimal(container.Length);
-            decimal dWidth = Miscellany.Math.Functions.ToDecimal(container.Width);
-            decimal dHeight = Miscellany.Math.Functions.ToDecimal(container.Height);
-            Container con = new Container(container.ID, dLength, dWidth, dHeight);
-            
+            Container con = ContainerToCB(container);
+
             //Create CromulentBisgetti Items
             List<Item> items = new List<Item>();
             foreach (Miscellany.ContainerPacking.Entities.Item i in itemsToPack)
             {
-                decimal ddim1 = Miscellany.Math.Functions.ToDecimal(i.Dim1);
-                decimal ddim2 = Miscellany.Math.Functions.ToDecimal(i.Dim2);
-                decimal ddim3 = Miscellany.Math.Functions.ToDecimal(i.Dim3);
-                Item cbItem = new Item(i.ID, ddim1, ddim2, ddim3, i.Quantity);
+                Item cbItem = ItemToCB(i);
                 items.Add(cbItem);
             }
             
@@ -63,7 +57,8 @@ namespace Miscellany.ContainerPacking
             int PackTimeInMilliseconds = Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds); //Max limit of int32 for milliseconds is596 hours
             double PercentContainerVolumePacked = Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentContainerVolumePacked);
             double PercentItemVolumePacked = Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentItemVolumePacked);
-            
+            //int BestFitOrientation = algorithmPackingResult.best
+
             //Convert CromulentBisgetti items to Miscellany Items
             //Packed Items
             List<Miscellany.ContainerPacking.Entities.Item> itemsPacked = new List<Miscellany.ContainerPacking.Entities.Item>();
@@ -88,6 +83,7 @@ namespace Miscellany.ContainerPacking
             d.Add("packTimeInMilliseconds", PackTimeInMilliseconds);
             d.Add("percentContainerVolumePacked", PercentContainerVolumePacked);
             d.Add("percentItemVolumePacked", PercentItemVolumePacked);
+            d.Add("orientation", PercentItemVolumePacked);
             return d;
         }
 
@@ -107,14 +103,35 @@ namespace Miscellany.ContainerPacking
             mItem.IsPacked = i.IsPacked;
             if (i.IsPacked)
             {
+                //Swap Y and Z values to shift from the CromulentBisgetti coordinate system and Dynamo
                 mItem.PackDimX = Miscellany.Math.Functions.ToDouble(i.PackDimX);
-                mItem.PackDimY = Miscellany.Math.Functions.ToDouble(i.PackDimY);
-                mItem.PackDimZ = Miscellany.Math.Functions.ToDouble(i.PackDimZ);
+                mItem.PackDimY = Miscellany.Math.Functions.ToDouble(i.PackDimZ);
+                mItem.PackDimZ = Miscellany.Math.Functions.ToDouble(i.PackDimY);
                 mItem.CoordX = Miscellany.Math.Functions.ToDouble(i.CoordX);
-                mItem.CoordY = Miscellany.Math.Functions.ToDouble(i.CoordY);
-                mItem.CoordZ = Miscellany.Math.Functions.ToDouble(i.CoordZ);
+                mItem.CoordY = Miscellany.Math.Functions.ToDouble(i.CoordZ);
+                mItem.CoordZ = Miscellany.Math.Functions.ToDouble(i.CoordY);
             }
             return mItem;
+        }
+
+        //Convert Miscellany Container to CromulentBisgetti Container
+        private static Container ContainerToCB(Miscellany.ContainerPacking.Entities.Container c)
+        {
+            decimal dLength = Miscellany.Math.Functions.ToDecimal(c.Length);
+            decimal dWidth = Miscellany.Math.Functions.ToDecimal(c.Width);
+            decimal dHeight = Miscellany.Math.Functions.ToDecimal(c.Height);
+            Container cbContainer = new Container(c.ID,dLength,dWidth,dHeight);
+            return cbContainer;
+        }
+
+        //Convert Miscellany Item to CromulentBisgetti Item
+        private static Item ItemToCB(Miscellany.ContainerPacking.Entities.Item i)
+        {
+            decimal ddim1 = Miscellany.Math.Functions.ToDecimal(i.Dim1);
+            decimal ddim2 = Miscellany.Math.Functions.ToDecimal(i.Dim2);
+            decimal ddim3 = Miscellany.Math.Functions.ToDecimal(i.Dim3);
+            Item cbItem = new Item(i.ID, ddim1, ddim2, ddim3, i.Quantity);
+            return cbItem;
         }
 
         #endregion

@@ -39,10 +39,7 @@ namespace Miscellany.ContainerPacking
             List<Item> items = new List<Item>();
             foreach (Miscellany.ContainerPacking.Entities.Item i in itemsToPack)
             {
-                decimal ddim1 = Miscellany.Math.Functions.ToDecimal(i.Dim1);
-                decimal ddim2 = Miscellany.Math.Functions.ToDecimal(i.Dim2);
-                decimal ddim3 = Miscellany.Math.Functions.ToDecimal(i.Dim3);
-                Item cbItem = new Item(i.ID, ddim1, ddim2, ddim3, i.Quantity);
+                Item cbItem = ItemToCB(i);
                 items.Add(cbItem);
             }
 
@@ -58,10 +55,7 @@ namespace Miscellany.ContainerPacking
             foreach (Miscellany.ContainerPacking.Entities.Container container in containers)
             {
                 //Create CromulentBisgetti Container
-                decimal dLength = Miscellany.Math.Functions.ToDecimal(container.Length);
-                decimal dWidth = Miscellany.Math.Functions.ToDecimal(container.Width);
-                decimal dHeight = Miscellany.Math.Functions.ToDecimal(container.Height);
-                Container con = new Container(container.ID, dLength, dWidth, dHeight);
+                Container con = ContainerToCB(container);
                 List<Container> cons = new List<Container> { con };
                 //Get container packing result
                 ContainerPackingResult containerPackingResult = CromulentBisgetti.ContainerPacking.PackingService.Pack(cons, items, algorithms).FirstOrDefault();
