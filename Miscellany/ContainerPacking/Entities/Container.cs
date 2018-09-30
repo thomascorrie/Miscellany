@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CromulentBisgetti.ContainerPacking;
-using CromulentBisgetti.ContainerPacking.Algorithms;
-using CromulentBisgetti.ContainerPacking.Entities;
 
 namespace Miscellany.ContainerPacking.Entities
 {
@@ -32,9 +29,9 @@ namespace Miscellany.ContainerPacking.Entities
         public Container(int id, double length, double width, double height)
         {
             this.ID = id;
-            this.Length = length; //Miscellany.Math.Functions.ToDouble(c.Length);
-            this.Width = width; //Miscellany.Math.Functions.ToDouble(c.Width);
-            this.Height = height; //Miscellany.Math.Functions.ToDouble(c.Height);
+            this.Length = length;
+            this.Width = width;
+            this.Height = height;
             this.volume = length * width * height;
         }
 
