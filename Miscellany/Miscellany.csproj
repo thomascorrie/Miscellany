@@ -173,8 +173,10 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(TargetDir)*.*" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)\bin\"
-xcopy /Y "$(ProjectDir)pkg.json" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)"</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y "$(TargetDir)*.dll" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)\bin\"
+xcopy /Y "$(TargetDir)*.xml" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)\bin\"
+xcopy /Y "$(ProjectDir)pkg.json" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)"
+xcopy /Y "$(SolutionDir)Samples\*.dyn" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)\extra\"</PostBuildEvent>
   </PropertyGroup>
   <Target Name="AfterBuild">
     <!-- Get System.Drawing.dll -->
