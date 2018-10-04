@@ -1,0 +1,306 @@
+{
+  "Uuid": "cc74bc2d-e14a-4c80-a8e4-17fdd9bed750",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Miscellany-Samples-List",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[\"a\",\"b\",\"c\",\"d\",\"e\"];",
+      "Id": "408e2d8dea9542789e60aa319f7df840",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "722020ca0e224aba90d3f3f85793b3a7",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.List.PairItems@var[]..[]",
+      "Id": "3e696618c440422cb09369e6fbc8870f",
+      "Inputs": [
+        {
+          "Id": "18381fe1710141fe8ab4fcabfcdc5811",
+          "Name": "list",
+          "Description": "List of items to pair\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ccbf324e8d5e4dc4aaf3b0855ac13ca5",
+          "Name": "list",
+          "Description": "Nested list of paired items",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Pairs items in a list: [a,b,c,d] > [[a,b],[b,c],[c,d]]\n\nList.PairItems (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[0,\"b\",[\"h\",\"i\"],Point.ByCoordinates(1000,2000,3000),\"e\"];",
+      "Id": "b49ad763efbd4916a912e931c9f232f1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c4f7169c2e4a453b92fecf929ef3a9b4",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Miscellany.List.PairItems@var[]..[]",
+      "Id": "7ca8666905f746fb93c9ce460a9dee73",
+      "Inputs": [
+        {
+          "Id": "aa0c3c94ad5c470c8df95a4018ce52ef",
+          "Name": "list",
+          "Description": "List of items to pair\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 4,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4288d1d981df4d23a33d3c6650a2e0f2",
+          "Name": "list",
+          "Description": "Nested list of paired items",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Pairs items in a list: [a,b,c,d] > [[a,b],[b,c],[c,d]]\n\nList.PairItems (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "98ef0ee46a7d40e6a1196ba31229e386",
+      "Inputs": [
+        {
+          "Id": "ae349189d96d4a3c871c9dac55e5106a",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0bb42a395ec644e881e75d890ae82b8a",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "e95d0986129140c3b6d650ee13bff742",
+      "Inputs": [
+        {
+          "Id": "a20985a70b794da9923c24e4bda9c456",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "13e9e7f448ac44c78ca8c4401ea743d8",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "722020ca0e224aba90d3f3f85793b3a7",
+      "End": "18381fe1710141fe8ab4fcabfcdc5811",
+      "Id": "8334589c5e3e40cf8a0025319cadd4d4"
+    },
+    {
+      "Start": "ccbf324e8d5e4dc4aaf3b0855ac13ca5",
+      "End": "ae349189d96d4a3c871c9dac55e5106a",
+      "Id": "be3f7d327d064f8a970ee46b1cb40c30"
+    },
+    {
+      "Start": "c4f7169c2e4a453b92fecf929ef3a9b4",
+      "End": "aa0c3c94ad5c470c8df95a4018ce52ef",
+      "Id": "751f255616c749a996aca7c043dfcbec"
+    },
+    {
+      "Start": "4288d1d981df4d23a33d3c6650a2e0f2",
+      "End": "a20985a70b794da9923c24e4bda9c456",
+      "Id": "d502e88550d14dfaadd1ef1bdf83c531"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 1537.6105570951049,
+      "EyeY": 10966.169511117309,
+      "EyeZ": 11035.027871130653,
+      "LookX": 3994.2830692383377,
+      "LookY": -12221.233368715864,
+      "LookZ": -10303.546429757733,
+      "UpX": 0.20989599957785621,
+      "UpY": 0.81411551835633345,
+      "UpZ": -0.54144214107570632
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "408e2d8dea9542789e60aa319f7df840",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 112.0,
+        "Y": 1069.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.PairItems",
+        "Id": "3e696618c440422cb09369e6fbc8870f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 415.23935140500134,
+        "Y": 1064.3276018854492
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b49ad763efbd4916a912e931c9f232f1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -184.42255259528406,
+        "Y": 1383.4270810468981
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.PairItems",
+        "Id": "7ca8666905f746fb93c9ce460a9dee73",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 417.89004591824744,
+        "Y": 1378.754682932348
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "98ef0ee46a7d40e6a1196ba31229e386",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 649.0350680903025,
+        "Y": 1066.377759763252
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "e95d0986129140c3b6d650ee13bff742",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 646.74581240769294,
+        "Y": 1380.0057882807705
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "c232183e52c948f39f4af49753a74c43",
+        "Title": "Miscellany",
+        "Nodes": [
+          "3e696618c440422cb09369e6fbc8870f",
+          "7ca8666905f746fb93c9ce460a9dee73"
+        ],
+        "Left": 405.23935140500134,
+        "Top": 1011.3276018854492,
+        "Width": 175.65069451324609,
+        "Height": 460.42708104689882,
+        "FontSize": 36.0,
+        "InitialTop": 1064.3276018854492,
+        "InitialHeight": 338.229837829458,
+        "TextblockHeight": 43.0,
+        "Background": "#FFA4E1FF"
+      }
+    ],
+    "X": 287.99705488275526,
+    "Y": -859.603428315658,
+    "Zoom": 1.0125092511221061
+  }
+}
