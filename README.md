@@ -13,7 +13,7 @@ A collection of miscellaneous nodes for [Dynamo 2](http://www.dynamobim.org/) in
 **Miscellany** is available on the Dynamo package manager.
 
 ## Documentation and Samples
-See the [Project Wiki](https://github.com/thomascorrie/Miscellany/wiki) for documentation. Sample will be included in future releases.
+See [Sample dyn files](https://github.com/thomascorrie/Miscellany/tree/master/Samples) and the [Project Wiki](https://github.com/thomascorrie/Miscellany/wiki) for documentation.
 
 ## Future Development and Issue Tracking
 See the [Project Board](https://github.com/thomascorrie/Miscellany/projects/1) for planned improvements and open issues.
