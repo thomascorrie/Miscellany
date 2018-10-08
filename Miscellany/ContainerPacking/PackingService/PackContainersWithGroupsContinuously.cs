@@ -53,9 +53,6 @@ namespace Miscellany.ContainerPacking
             //Reverse List to start from back so removals don't cause problems to indexing
             items.Reverse();
 
-            //Temporary group of Items to pack
-            List<Item> tempItemsToPack = new List<Item>();
-
             //Output lists
             List<List<Miscellany.ContainerPacking.Entities.Item>> itemsPacked = new List<List<Miscellany.ContainerPacking.Entities.Item>>();
             bool IsCompletePack = false;
@@ -67,25 +64,28 @@ namespace Miscellany.ContainerPacking
             //Items Count
             int currentPackGroup = items.Count - 1; //Set to last index
 
+            //Temporary group of Items to pack
+            List<Item> tempItemsToPack = new List<Item>();
+
             //Loop through the containers
             foreach (Miscellany.ContainerPacking.Entities.Container container in containers)
             {
                 //How many Items in temp list?
                 int tempCount = tempItemsToPack.Count;
-
+                
                 //Ensure count matches the number of groups remaining
                 currentPackGroup = items.Count - 1;
 
-                if (tempCount > minimumItems)
+                if (tempCount >= minimumItems)
                 {
-                    //There are more Items than the minimum
+                    //There are more Items than the minimum or the same
                 }
                 else if (currentPackGroup < 0 || (currentPackGroup == 0 && items[currentPackGroup].Count == 0))
                 {
                     //There are fewer Items than the minimum but there are no more Items to draw on
                     if (tempCount == 0)
                     {
-                        //If there are no Items left break the loop
+                        //No Items left so break the loop
                         break;
                     }
                 }
@@ -122,7 +122,6 @@ namespace Miscellany.ContainerPacking
                         }
                     }
                 }
-
                 //Create CromulentBisgetti Container
                 Container con = ContainerToCB(container);
                 List<Container> cons = new List<Container> { con };
