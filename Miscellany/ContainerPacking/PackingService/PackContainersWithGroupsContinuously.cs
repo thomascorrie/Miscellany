@@ -70,6 +70,9 @@ namespace Miscellany.ContainerPacking
             //Loop through the containers
             foreach (Miscellany.ContainerPacking.Entities.Container container in containers)
             {
+                //No more pack groups to consider
+                if (currentPackGroup < 0) { break; } 
+                
                 //How many Items in temp list?
                 int tempCount = tempItemsToPack.Count;
                 
@@ -92,26 +95,40 @@ namespace Miscellany.ContainerPacking
                 else
                 {
                     //There are fewer Items than the minimum but there are further Items to use
+                    int whileCount = 0;
                     while (tempCount < minimumItems)
                     {
+                        whileCount++;
+                        if (whileCount > 10)
+                        {
+                            continue; //temp
+                        }
+                        if (currentPackGroup < 0)
+                        {
+                            break;
+                        }
                         if (items[currentPackGroup].Count == 0)
                         {
                             //No items left, move onto next group for next loop
                             items.RemoveAt(currentPackGroup);
                             currentPackGroup--;
                         }
-                        else if (items[currentPackGroup].Count < minimumItems - tempCount)
+                        else if (items[currentPackGroup].Count <= (minimumItems - tempCount))
                         {
                             //Fewer Items are available than desired
                             tempItemsToPack.AddRange(items[currentPackGroup]); //Add all Items
                             items.RemoveAt(currentPackGroup); //Remove all items from the group
                             currentPackGroup--; //Move to the next group index for the next loop
-                            tempCount = tempItemsToPack.Count; //Set the count
+                            tempCount = tempItemsToPack.Count; //Set the cou/*
                         }
-                        else
+                        else if (items[currentPackGroup].Count > (minimumItems - tempCount))
                         {
                             //The desired number or greater are available
                             int numberToTake = minimumItems - tempCount;
+                            if (numberToTake < 1)
+                            {
+                                continue;
+                            }
                             for (int i = numberToTake - 1; i >= 0; i--)
                             {
                                 //Take each required Item and remove from list
@@ -120,8 +137,10 @@ namespace Miscellany.ContainerPacking
                             }
                             tempCount = tempItemsToPack.Count; //Report the current size of the temporary group
                         }
+                        //tempCount++;
                     }
                 }
+
                 //Create CromulentBisgetti Container
                 Container con = ContainerToCB(container);
                 List<Container> cons = new List<Container> { con };
@@ -153,6 +172,7 @@ namespace Miscellany.ContainerPacking
                 TotalPackTimeInMilliseconds += Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds);
                 PercentContainerVolumePacked.Add(Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentContainerVolumePacked));
                 PercentItemVolumePacked.Add(Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentItemVolumePacked));
+                
             }
 
             //Convert CromulentBisgetti items to Miscellany Items for Unpacked Items
