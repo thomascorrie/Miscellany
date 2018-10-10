@@ -20,7 +20,7 @@ namespace Miscellany.ContainerPacking
         /// <param name="containers">Containers in order</param>
         /// <param name="itemsToPack">Items to pack</param>
         /// <param name="algorithm">Algorithm ID</param>
-        /// <param name="minimumBooks">The minimum number of items to consider for a container</param>
+        /// <param name="minimumItems">The minimum number of items to consider for a container</param>
         /// <returns name="packedItems">Items that were successfully packed</returns>
         /// <returns name="unpackedItems">Items that were not packed</returns>
         /// <returns name="isCompletePack">Are all items packed?</returns>
@@ -32,11 +32,12 @@ namespace Miscellany.ContainerPacking
         /// containerpacking
         /// </search>
         [MultiReturn(new[] { "packedItems", "unpackedItems", "isCompletePack", "packTimeInMilliseconds", "totalPackTimeInMilliseconds", "percentContainerVolumePacked", "percentItemVolumePacked" })]
-        public static Dictionary<string, object> PackContainersWithGroupsContinuously(List<Miscellany.ContainerPacking.Entities.Container> containers, List<List<Miscellany.ContainerPacking.Entities.Item>> itemsToPack, int algorithm = 1, int minimumBooks = 20)
+        public static Dictionary<string, object> PackContainersWithGroupsContinuously(List<Miscellany.ContainerPacking.Entities.Container> containers, List<List<Miscellany.ContainerPacking.Entities.Item>> itemsToPack, int algorithm = 1, int minimumItems = 20)
         {
             //Select algorithm using integer
             List<int> algorithms = new List<int> { algorithm };
-            //Create CromulentBisgetti Items
+
+            //Create CromulentBisgetti Items, retaining the nested structure
             List<List<Item>> items = new List<List<Item>>();
             foreach (List<Miscellany.ContainerPacking.Entities.Item> l in itemsToPack)
             {
@@ -63,42 +64,80 @@ namespace Miscellany.ContainerPacking
             //Items Count
             int currentPackGroup = items.Count - 1; //Set to last index
 
+            //Temporary group of Items to pack
+            List<Item> tempItemsToPack = new List<Item>();
+
             //Loop through the containers
             foreach (Miscellany.ContainerPacking.Entities.Container container in containers)
             {
-                if (items.Count == 0) //There are no lists of items left
+                //No more pack groups to consider
+                if (currentPackGroup < 0) { break; } 
+                
+                //How many Items in temp list?
+                int tempCount = tempItemsToPack.Count;
+                
+                //Ensure count matches the number of groups remaining
+                currentPackGroup = items.Count - 1;
+
+                if (tempCount >= minimumItems)
                 {
-                    break;
+                    //There are more Items than the minimum or the same
                 }
-                if (items[currentPackGroup].Count == 0) //There are no items left in the current list
+                else if (currentPackGroup < 0 || (currentPackGroup == 0 && items[currentPackGroup].Count == 0))
                 {
-                    if (currentPackGroup == 0) //If the current list is the last
+                    //There are fewer Items than the minimum but there are no more Items to draw on
+                    if (tempCount == 0)
                     {
+                        //No Items left so break the loop
                         break;
                     }
-                    items.RemoveAt(currentPackGroup); //Remove empty list
-                    currentPackGroup--; //move to next group
                 }
-
-                //Create list of items to pack
-                List<Item> itemsToPackGroup = items[currentPackGroup];
-                //If there are fewer than the minimum item count per bin, then make up numbers from the next group
-                if (itemsToPackGroup.Count < minimumBooks && currentPackGroup > 0)
+                else
                 {
-                    //If there are fewer items in the next group than the minimum, include them all
-                    if (items[currentPackGroup - 1].Count < minimumBooks - itemsToPackGroup.Count)
+                    //There are fewer Items than the minimum but there are further Items to use
+                    int whileCount = 0;
+                    while (tempCount < minimumItems)
                     {
-                        itemsToPackGroup.AddRange(items[currentPackGroup - 1]); //Add 
-                        items[currentPackGroup - 1].Clear(); //Remove all items from the list because they are now in the pack list
-                    }
-                    else //If there are more items in the next group, take just enough to make the minimum
-                    {
-                        int numberToTake = minimumBooks - itemsToPackGroup.Count;
-                        for (int i = numberToTake - 1; i >= 0; i--)
+                        whileCount++;
+                        if (whileCount > 10)
                         {
-                            itemsToPackGroup.Add(items[currentPackGroup - 1][i]);
-                            items[currentPackGroup - 1].RemoveAt(i);
+                            continue; //temp
                         }
+                        if (currentPackGroup < 0)
+                        {
+                            break;
+                        }
+                        if (items[currentPackGroup].Count == 0)
+                        {
+                            //No items left, move onto next group for next loop
+                            items.RemoveAt(currentPackGroup);
+                            currentPackGroup--;
+                        }
+                        else if (items[currentPackGroup].Count <= (minimumItems - tempCount))
+                        {
+                            //Fewer Items are available than desired
+                            tempItemsToPack.AddRange(items[currentPackGroup]); //Add all Items
+                            items.RemoveAt(currentPackGroup); //Remove all items from the group
+                            currentPackGroup--; //Move to the next group index for the next loop
+                            tempCount = tempItemsToPack.Count; //Set the cou/*
+                        }
+                        else if (items[currentPackGroup].Count > (minimumItems - tempCount))
+                        {
+                            //The desired number or greater are available
+                            int numberToTake = minimumItems - tempCount;
+                            if (numberToTake < 1)
+                            {
+                                continue;
+                            }
+                            for (int i = numberToTake - 1; i >= 0; i--)
+                            {
+                                //Take each required Item and remove from list
+                                tempItemsToPack.Add(items[currentPackGroup][i]);
+                                items[currentPackGroup].RemoveAt(i);
+                            }
+                            tempCount = tempItemsToPack.Count; //Report the current size of the temporary group
+                        }
+                        //tempCount++;
                     }
                 }
 
@@ -107,7 +146,7 @@ namespace Miscellany.ContainerPacking
                 List<Container> cons = new List<Container> { con };
 
                 //Get container packing result
-                ContainerPackingResult containerPackingResult = CromulentBisgetti.ContainerPacking.PackingService.Pack(cons, itemsToPackGroup, algorithms).FirstOrDefault();
+                ContainerPackingResult containerPackingResult = CromulentBisgetti.ContainerPacking.PackingService.Pack(cons, tempItemsToPack, algorithms).FirstOrDefault();
 
                 //Get the single algorthim packing result from the container packing result
                 AlgorithmPackingResult algorithmPackingResult = containerPackingResult.AlgorithmPackingResults.FirstOrDefault();
@@ -123,21 +162,17 @@ namespace Miscellany.ContainerPacking
                 IsCompletePack = algorithmPackingResult.IsCompletePack;
                 if (IsCompletePack) //If all the items from that group are packed
                 {
-                    items.RemoveAt(currentPackGroup); //Remove group from list to pack
-                    currentPackGroup--; //Move on to the next group
+                    tempItemsToPack.Clear(); //Clear all Items from temp list
                 }
                 else
                 {
-                    items[currentPackGroup] = algorithmPackingResult.UnpackedItems; //items is set to unpacked items for next loop
+                    tempItemsToPack = algorithmPackingResult.UnpackedItems; //items is set to unpacked items for next loop
                 }
                 PackTimeInMilliseconds.Add(Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds));
                 TotalPackTimeInMilliseconds += Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds);
                 PercentContainerVolumePacked.Add(Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentContainerVolumePacked));
                 PercentItemVolumePacked.Add(Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentItemVolumePacked));
-                if (items.Count == 0) //No more groups to pack
-                {
-                    break;
-                }
+                
             }
 
             //Convert CromulentBisgetti items to Miscellany Items for Unpacked Items
