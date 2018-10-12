@@ -76,6 +76,8 @@
     <Compile Include="ContainerPacking\PackingService\PackContainers.cs" />
     <Compile Include="ContainerPacking\PackingService\PackContainersWithGroups.cs" />
     <Compile Include="ContainerPacking\PackingService\PackContainersWithGroupsContinuously.cs" />
+    <Compile Include="ContainerPacking\PackingService\LeftOver.cs" />
+    <Compile Include="ContainerPacking\PackingService\PlaceItemsAndInfill.cs" />
     <Compile Include="List\List.cs" />
     <Compile Include="Math\Functions.cs" />
     <Compile Include="Geometry\Abstract\Abstract.cs" />
