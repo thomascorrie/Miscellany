@@ -37,6 +37,9 @@ namespace Miscellany.ContainerPacking
             //Select algorithm using integer
             List<int> algorithms = new List<int> { algorithm };
 
+            //Sequence for packed Items
+            int seq = 1;
+
             //Create CromulentBisgetti Items, retaining the nested structure
             List<List<Item>> items = new List<List<Item>>();
             foreach (List<Miscellany.ContainerPacking.Entities.Item> l in itemsToPack)
@@ -156,6 +159,8 @@ namespace Miscellany.ContainerPacking
                 foreach (Item i in algorithmPackingResult.PackedItems)
                 {
                     Miscellany.ContainerPacking.Entities.Item mItem = ItemToMiscellany(i);
+                    mItem.Sequence = seq;
+                    seq++;
                     itemsPackedPass.Add(mItem);
                 }
                 itemsPacked.Add(itemsPackedPass);

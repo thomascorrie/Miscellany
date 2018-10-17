@@ -72,6 +72,7 @@
     <Compile Include="About.cs" />
     <Compile Include="ContainerPacking\Entities\Container.cs" />
     <Compile Include="ContainerPacking\Entities\Item.cs" />
+    <Compile Include="ContainerPacking\PackingService\Conversions.cs" />
     <Compile Include="ContainerPacking\PackingService\PackContainer.cs" />
     <Compile Include="ContainerPacking\PackingService\PackContainers.cs" />
     <Compile Include="ContainerPacking\PackingService\PackContainersWithGroups.cs" />
@@ -93,6 +94,8 @@
     <Content Include="Miscellany_DynamoCustomization.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.Sequence.Large.png" />
+    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.Sequence.Small.png" />
     <None Include="Resources\Images\Small\Miscellany.About.Miscellany.Small.png" />
     <None Include="Resources\Images\Large\Miscellany.About.Miscellany.Large.png" />
     <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.ID.Small.png" />

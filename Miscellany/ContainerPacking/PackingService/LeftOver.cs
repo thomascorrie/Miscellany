@@ -9,16 +9,8 @@ namespace Miscellany.ContainerPacking
     /// <summary>
     /// LeftOver space from Item placing
     /// </summary>
-    public class LeftOver
+    internal class LeftOver //Internal class to hide from Dynamo
     {
-        public double Width { get; set; }
-        public double Depth { get; set; }
-        public double Height { get; set; }
-        public double X { get; set; }
-        public double Y { get; set; }
-        public double Z { get; set; }
-        public double Volume { get; set; }
-
         public LeftOver(double width, double depth, double height, double x, double y, double z)
         {
             Width = width;
@@ -29,5 +21,14 @@ namespace Miscellany.ContainerPacking
             Z = z;
             Volume = width * depth * height;
         }
+        
+        public double Width { get; set; }
+        public double Depth { get; set; }
+        public double Height { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Z { get; set; }
+        public double Volume { get; set; }
+
     }
 }

@@ -16,7 +16,7 @@ namespace Miscellany.ContainerPacking
         #region PlaceItemsAndInfill
 
         /// <summary>
-        /// Runs the chosen packing algorithm as a greedy strategy on a list of containers and a list of items to pack. When the number of Items in a group dwindles below the minimum number, the difference is made up with Items taken from the next group. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.
+        /// Intended for packing books on shelves. The books are first placed vertically on a shelf and then the remaining space is packed using the chosen packing algorithm. When the number of Items in a group dwindles below the minimum number, the difference is made up with Items taken from the next group. It aims to solve optimally at each container in turn and is not globally optimal. The default algorithm (1) is EB-AFIT from David Chapman's 3DContainerPacking library.
         /// </summary>
         /// <param name="containers">Containers in order</param>
         /// <param name="itemsToPack">Items to pack</param>
@@ -39,6 +39,9 @@ namespace Miscellany.ContainerPacking
             List<string> report = new List<string>();
             //Select algorithm using integer
             List<int> algorithms = new List<int> { algorithm };
+
+            //Sequence for packed Items
+            int seq = 1;
 
             //Create CromulentBisgetti Items, retaining the nested structure
             List<List<Item>> items = new List<List<Item>>();
@@ -361,6 +364,8 @@ namespace Miscellany.ContainerPacking
                 foreach (Item i in placedItems)
                 {
                     Miscellany.ContainerPacking.Entities.Item mItem = ItemToMiscellany(i);
+                    mItem.Sequence = seq;
+                    seq++;
                     itemsPackedPass.Add(mItem);
                 }
 
