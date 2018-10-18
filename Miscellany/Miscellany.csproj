@@ -94,6 +94,8 @@
     <Content Include="Miscellany_DynamoCustomization.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.PackingService.PlaceItemsAndInfill.Large.png" />
+    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.PackingService.PlaceItemsAndInfill.Small.png" />
     <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.Sequence.Large.png" />
     <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.Sequence.Small.png" />
     <None Include="Resources\Images\Small\Miscellany.About.Miscellany.Small.png" />
