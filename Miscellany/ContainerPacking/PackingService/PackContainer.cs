@@ -31,6 +31,14 @@ namespace Miscellany.ContainerPacking
         [MultiReturn(new[] { "packedItems", "unpackedItems", "isCompletePack", "packTimeInMilliseconds", "percentContainerVolumePacked", "percentItemVolumePacked" })]
         public static Dictionary<string, object> PackContainer(Miscellany.ContainerPacking.Entities.Container container, List<Miscellany.ContainerPacking.Entities.Item> itemsToPack, int algorithm = 1)
         {
+            //Check for 2D inputs and set 
+            bool bool2D = false;
+            if (container.Height == 0)
+            {
+                bool2D = true;
+                container.Height = 1;
+            }
+
             //Create CromulentBisgetti Container
             Container con = ContainerToCB(container);
 
@@ -38,19 +46,20 @@ namespace Miscellany.ContainerPacking
             List<Item> items = new List<Item>();
             foreach (Miscellany.ContainerPacking.Entities.Item i in itemsToPack)
             {
+                if (bool2D) i.Dim3 = 1;
                 Item cbItem = ItemToCB(i);
                 items.Add(cbItem);
             }
-            
+
             //Create list with single container
             List<Container> containers = new List<Container> { con };
-            
+
             //Select algorithm using integer
             List<int> algorithms = new List<int> { algorithm };
-            
+
             //Get container packing result
             ContainerPackingResult containerPackingResult = CromulentBisgetti.ContainerPacking.PackingService.Pack(containers, items, algorithms).FirstOrDefault();
-            
+
             //Get the single algorthim packing result from the container packing result
             AlgorithmPackingResult algorithmPackingResult = containerPackingResult.AlgorithmPackingResults.FirstOrDefault();
             bool IsCompletePack = algorithmPackingResult.IsCompletePack;
@@ -71,10 +80,11 @@ namespace Miscellany.ContainerPacking
             List<Miscellany.ContainerPacking.Entities.Item> itemsUnpacked = new List<Miscellany.ContainerPacking.Entities.Item>();
             foreach (Item i in algorithmPackingResult.UnpackedItems)
             {
+                if (bool2D) i.PackDimZ = 0;
                 Miscellany.ContainerPacking.Entities.Item mItem = ItemToMiscellany(i);
                 itemsUnpacked.Add(mItem);
             }
-            
+
             //Return values
             var d = new Dictionary<string, object>();
             d.Add("packedItems", itemsPacked);
@@ -120,7 +130,7 @@ namespace Miscellany.ContainerPacking
             decimal dLength = Miscellany.Math.Functions.ToDecimal(c.Length);
             decimal dWidth = Miscellany.Math.Functions.ToDecimal(c.Width);
             decimal dHeight = Miscellany.Math.Functions.ToDecimal(c.Height);
-            Container cbContainer = new Container(c.ID,dLength,dWidth,dHeight);
+            Container cbContainer = new Container(c.ID, dLength, dWidth, dHeight);
             return cbContainer;
         }
 

@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs" />
+    <Compile Include="ContainerPacking\Algorithms\Algorithms.cs" />
     <Compile Include="ContainerPacking\Entities\Container.cs" />
     <Compile Include="ContainerPacking\Entities\Item.cs" />
     <Compile Include="ContainerPacking\PackingService\PackContainer.cs" />

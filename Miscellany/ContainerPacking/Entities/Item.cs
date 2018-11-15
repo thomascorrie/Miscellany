@@ -29,13 +29,13 @@ namespace Miscellany.ContainerPacking.Entities
         /// <param name="id">The item ID.</param>
         /// <param name="dim1">The length of one of the three item dimensions</param>
         /// <param name="dim2">The length of another of the three item dimensions</param>
-        /// <param name="dim3">The length of the other of the three item dimensions</param>
+        /// <param name="dim3">The length of the other of the three item dimensions (with a default of 0 for 2D packing)</param>
         /// <param name="quantity">The item quantity (the default is 1)</param>
         /// <returns name="item">Item object</returns>
         /// <search>
         /// containerpacking
         /// </search>
-        public Item(int id, double dim1, double dim2, double dim3, int quantity = 1)
+        public Item(int id, double dim1, double dim2, double dim3 = 0, int quantity = 1)
         {
             this.ID = id;
             this.Dim1 = dim1;

@@ -25,8 +25,8 @@ namespace Miscellany.ContainerPacking.Entities
         /// <param name="id">The container ID</param>
         /// <param name="length">The container length</param>
         /// <param name="width">The container width</param>
-        /// <param name="height">The container height</param>
-        public Container(int id, double length, double width, double height)
+        /// <param name="height">The container height (with a default of 0 for 2D packing)</param>
+        public Container(int id, double length, double width, double height = 0)
         {
             this.ID = id;
             this.Length = length;
