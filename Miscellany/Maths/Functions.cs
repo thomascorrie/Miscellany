@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Miscellany.Math
+namespace Miscellany.Maths
 {
     /// <summary>
     /// Functions

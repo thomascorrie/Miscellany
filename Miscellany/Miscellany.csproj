@@ -76,8 +76,8 @@
     <Compile Include="ContainerPacking\PackingService\PackContainers.cs" />
     <Compile Include="ContainerPacking\PackingService\PackContainersWithGroups.cs" />
     <Compile Include="ContainerPacking\PackingService\PackContainersWithGroupsContinuously.cs" />
-    <Compile Include="List\List.cs" />
-    <Compile Include="Math\Functions.cs" />
+    <Compile Include="Lists\Lists.cs" />
+    <Compile Include="Maths\Functions.cs" />
     <Compile Include="Geometry\Abstract\Abstract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,8 +88,12 @@
     <None Include="pkg.json" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Miscellany.Migrations.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Miscellany_DynamoCustomization.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <None Include="Resources\Images\Small\Miscellany.About.Miscellany.Small.png" />
     <None Include="Resources\Images\Large\Miscellany.About.Miscellany.Large.png" />

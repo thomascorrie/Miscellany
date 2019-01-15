@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<migrations>
+  <priorNameHint>
+    <oldName>Miscellany.List.PairItems</oldName>
+    <newName>Miscellany.Lists.PairItems</newName>
+  </priorNameHint>
+  <priorNameHint>
+    <oldName>Miscellany.Math.ToDecimal</oldName>
+    <newName>Miscellany.Maths.ToDecimal</newName>
+  </priorNameHint>
+  <priorNameHint>
+    <oldName>Miscellany.Math.ToDouble</oldName>
+    <newName>Miscellany.Maths.ToDouble</newName>
+  </priorNameHint>
+  <priorNameHint>
+    <oldName>Miscellany.Math.RunningTotal</oldName>
+    <newName>Miscellany.Maths.RunningTotal</newName>
+  </priorNameHint>
+</migrations>
