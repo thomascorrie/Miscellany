@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Miscellany.Maths
+namespace Miscellany.Math
 {
     /// <summary>
     /// Functions
     /// </summary>
-    public static class Functions
+    public class Functions
     {
+        private Functions()
+        {
+
+        }
         /// <summary>
         ///     Converts a double to a decimal. If the double is above or below the maximum range for a decimal then the number is bounded to theos limits
         /// </summary>

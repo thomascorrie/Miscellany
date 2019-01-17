@@ -6,7 +6,7 @@ namespace Miscellany
     /// <summary>
     /// Modify
     /// </summary>
-    public static class Lists
+    public static class MiscLists
     {
         /// <summary>
         ///     Pairs items in a list: [a,b,c,d] > [[a,b],[b,c],[c,d]]

@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Autodesk.DesignScript.Runtime;
 using Autodesk.DesignScript.Geometry;
+using Dynamo.Graph.Nodes;
 
-namespace Miscellany.Geometry.Abstract
+namespace Miscellany.Geometry
 {
     /// <summary>
     /// CoordinateSystem
     /// </summary>
-    public static class CoordinateSystem
+    public static class Abstract
     {
         /// <summary>
         /// Shows scalable lines representing the CoordinateSystem axes and rectangles for the planes
@@ -26,8 +27,9 @@ namespace Miscellany.Geometry.Abstract
         /// <returns name="XYPlane">Plane</returns>
         /// <returns name="YZPlane">Plane</returns>
         /// <returns name="ZXPlane">Plane</returns>
+        [NodeCategory("Query")]
         [MultiReturn(new[] { "Display", "Origin", "XAxis", "YAxis", "ZAxis", "XYPlane", "YZPlane", "ZXPlane" })]
-        public static Dictionary<string, object> Display(Autodesk.DesignScript.Geometry.CoordinateSystem coordinateSystem, double length = 1000)
+        public static Dictionary<string, object> CoordinateSystemDisplay(Autodesk.DesignScript.Geometry.CoordinateSystem coordinateSystem, double length = 1000)
         {
             //Avoid zero length
             if (length == 0)
@@ -63,13 +65,7 @@ namespace Miscellany.Geometry.Abstract
             d.Add("ZXPlane", coordinateSystem.ZXPlane);
             return d;
         }
-    }
 
-    /// <summary>
-    /// Plane
-    /// </summary>
-    public static class Plane
-    {
         /// <summary>
         /// Shows scalable lines representing the axes and a rectangle for the Plane
         /// </summary>
@@ -80,8 +76,9 @@ namespace Miscellany.Geometry.Abstract
         /// <returns name="XAxis">Vector</returns>
         /// <returns name="YAxis">Vector</returns>
         /// <returns name="Normal">Vector</returns>
+        [NodeCategory("Query")]
         [MultiReturn(new[] { "Display", "Origin", "XAxis", "YAxis", "Normal" })]
-        public static Dictionary<string, object> Display(Autodesk.DesignScript.Geometry.Plane plane, double length = 1000)
+        public static Dictionary<string, object> PlaneDisplay(Autodesk.DesignScript.Geometry.Plane plane, double length = 1000)
         {
             //Avoid zero length
             if (length == 0)
@@ -114,13 +111,7 @@ namespace Miscellany.Geometry.Abstract
             d.Add("Normal", plane.Normal);
             return d;
         }
-    }
-
-    /// <summary>
-    /// Vector
-    /// </summary>
-    public static class Vector
-    {
+    
         /// <summary>
         /// Shows a scalable line representing a Vector from a chosen starting point
         /// </summary>
@@ -132,8 +123,9 @@ namespace Miscellany.Geometry.Abstract
         /// <returns name="y">double</returns>
         /// <returns name="z">double</returns>
         /// <returns name="Length">double</returns>
+        [NodeCategory("Query")]
         [MultiReturn(new[] { "Display", "x", "y", "z", "Length" })]
-        public static Dictionary<string, object> Display(Autodesk.DesignScript.Geometry.Vector vector, Autodesk.DesignScript.Geometry.Point startPoint, double scale = 1000)
+        public static Dictionary<string, object> VectorDisplay(Autodesk.DesignScript.Geometry.Vector vector, Autodesk.DesignScript.Geometry.Point startPoint, double scale = 1000)
         {
             //Avoid zero length
             if (scale == 0)

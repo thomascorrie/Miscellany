@@ -108,8 +108,8 @@ namespace Miscellany.ContainerPacking
                 }
                 PackTimeInMilliseconds.Add(Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds));
                 TotalPackTimeInMilliseconds += Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds);
-                PercentContainerVolumePacked.Add(Miscellany.Maths.Functions.ToDouble(algorithmPackingResult.PercentContainerVolumePacked));
-                PercentItemVolumePacked.Add(Miscellany.Maths.Functions.ToDouble(algorithmPackingResult.PercentItemVolumePacked));
+                PercentContainerVolumePacked.Add(Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentContainerVolumePacked));
+                PercentItemVolumePacked.Add(Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentItemVolumePacked));
                 if (items.Count == 0) //No more groups to pack
                 {
                     break;

@@ -7,29 +7,17 @@
     <namespace name="Miscellany">
       <category>Miscellany</category>
     </namespace>
-    <!--<namespace name="Miscellany.Geometry.Abstract">
-      <category>Miscellany.Geometry.Abstract</category>
-    </namespace>-->
-    <namespace name="Miscellany.Lists">
-      <category>Miscellany.ListChabbers</category>
+    <namespace name="Miscellany.Geometry">
+      <category>Miscellany.Geometry</category>
     </namespace>
-    <namespace name="Miscellany.Maths">
+    <namespace name="Miscellany.Math">
       <category>Miscellany.Math</category>
     </namespace>
-    <!--<namespace name="Miscellany.ContainerPacking">
+    <namespace name="Miscellany.ContainerPacking">
       <category>Miscellany.ContainerPacking</category>
     </namespace>
     <namespace name="Miscellany.ContainerPacking.Entities">
       <category>Miscellany.ContainerPacking.Entities</category>
     </namespace>
-    <namespace name="Miscellany.ContainerPacking.Entities.Container">
-      <category>Miscellany.ContainerPacking.Entities.Container</category>
-    </namespace>
-    <namespace name="Miscellany.ContainerPacking.Entities.Item">
-      <category>Miscellany.ContainerPacking.Entities.Item</category>
-    </namespace>-->
   </namespaces>
-  <classes>
-    <class name="Miscellany.Maths.Functions" shortname="Funky"/>
-  </classes>
 </doc>
