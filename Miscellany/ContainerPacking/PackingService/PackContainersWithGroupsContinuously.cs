@@ -170,8 +170,8 @@ namespace Miscellany.ContainerPacking
                 }
                 PackTimeInMilliseconds.Add(Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds));
                 TotalPackTimeInMilliseconds += Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds);
-                PercentContainerVolumePacked.Add(Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentContainerVolumePacked));
-                PercentItemVolumePacked.Add(Miscellany.Math.Functions.ToDouble(algorithmPackingResult.PercentItemVolumePacked));
+                PercentContainerVolumePacked.Add(Miscellany.Maths.ToDouble(algorithmPackingResult.PercentContainerVolumePacked));
+                PercentItemVolumePacked.Add(Miscellany.Maths.ToDouble(algorithmPackingResult.PercentItemVolumePacked));
                 
             }
 

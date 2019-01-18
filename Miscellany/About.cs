@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dynamo.Graph.Nodes;
 
 namespace Miscellany
 {
@@ -18,6 +19,7 @@ namespace Miscellany
         /// <search>
         /// Miscellany
         /// </search>
+        [NodeCategory("Create")]
         public static string Miscellany()
         {
             string version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString() + "." + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Build.ToString();
