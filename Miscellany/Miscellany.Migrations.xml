@@ -13,7 +13,19 @@
     <newName>Miscellany.Geometry.Abstract.VectorDisplay</newName>
   </priorNameHint>
   <priorNameHint>
+    <oldName>Miscellany.Math.Functions.RunningTotal</oldName>
+    <newName>Miscellany.Maths.RunningTotal</newName>
+  </priorNameHint>
+  <priorNameHint>
     <oldName>Miscellany.Math.Functions.ToDecimal</oldName>
     <newName>Miscellany.Maths.ToDecimal</newName>
+  </priorNameHint>
+  <priorNameHint>
+    <oldName>Miscellany.Math.Functions.ToDouble</oldName>
+    <newName>Miscellany.Maths.ToDouble</newName>
+  </priorNameHint>
+  <priorNameHint>
+    <oldName>Miscellany.List.PairItems</oldName>
+    <newName>Miscellany.List.Modifies.PairItems</newName>
   </priorNameHint>
 </migrations>

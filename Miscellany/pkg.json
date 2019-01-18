@@ -3,7 +3,7 @@
 "file_hash": null,
 "name": "Miscellany",
 "version": "1.2.0",
-"description": "Miscellaneous nodes for Dynamo",
+"description": "Miscellaneous nodes for Dynamo. Includes an implementation of David Chapman's 3DContainerPacking library. Miscellany is authored and maintained by Thomas Corrie",
 "group": "",
 "keywords": [
 "3DContainerPacking",
@@ -12,7 +12,7 @@
 ],
 "dependencies": [],
 "contents": "",
-"engine_version": "2.0.1.5055",
+"engine_version": "2.0.2.6826",
 "engine": "dynamo",
 "engine_metadata": "",
 "site_url": "http://www.thomascorrie.com",

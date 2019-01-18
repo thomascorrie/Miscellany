@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="Analysis, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.DynamoCoreNodes.2.1.0.7451\lib\net47\Analysis.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="CromulentBisgetti">
       <HintPath>..\..\..\3DContainerPacking\src\CromulentBisgetti.ContainerPacking\bin\Debug\CromulentBisgetti.dll</HintPath>
