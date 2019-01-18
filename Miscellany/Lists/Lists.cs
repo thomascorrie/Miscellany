@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Collections; //Need this to handle non-specific IList as opposed to IList<T>
 
-namespace Miscellany
+namespace Miscellany.List
 {
     /// <summary>
-    /// Modify
+    /// Modifies
     /// </summary>
-    public static class MiscLists
+    public static class Modifies
     {
         /// <summary>
         ///     Pairs items in a list: [a,b,c,d] > [[a,b],[b,c],[c,d]]

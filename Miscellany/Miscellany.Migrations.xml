@@ -12,4 +12,8 @@
     <oldName>Miscellany.Geometry.Abstract.Vector.Display</oldName>
     <newName>Miscellany.Geometry.Abstract.VectorDisplay</newName>
   </priorNameHint>
+  <priorNameHint>
+    <oldName>Miscellany.Math.Functions.ToDecimal</oldName>
+    <newName>Miscellany.Maths.ToDecimal</newName>
+  </priorNameHint>
 </migrations>

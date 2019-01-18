@@ -141,7 +141,7 @@
     <Compile Include="ContainerPacking\PackingService\PackContainersWithGroups.cs" />
     <Compile Include="ContainerPacking\PackingService\PackContainersWithGroupsContinuously.cs" />
     <Compile Include="Lists\Lists.cs" />
-    <Compile Include="Maths\Functions.cs" />
+    <Compile Include="Maths\Maths.cs" />
     <Compile Include="Geometry\Abstract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -158,6 +158,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Resources\Images\Large\Miscellany.Maths.RunningTotal.Large.png" />
+    <Content Include="Resources\Images\Large\Miscellany.Maths.ToDecimal.Large.png" />
+    <Content Include="Resources\Images\Large\Miscellany.Maths.ToDouble.Large.png" />
+    <Content Include="Resources\Images\Small\Miscellany.Maths.RunningTotal.Small.png" />
+    <Content Include="Resources\Images\Small\Miscellany.Maths.ToDecimal.Small.png" />
+    <Content Include="Resources\Images\Small\Miscellany.Maths.ToDouble.Small.png" />
     <None Include="Resources\Images\Small\Miscellany.About.Miscellany.Small.png" />
     <None Include="Resources\Images\Large\Miscellany.About.Miscellany.Large.png" />
     <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.ID.Small.png" />
@@ -196,7 +202,6 @@
     <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.CoordZ.Large.png" />
     <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.CoordY.Large.png" />
     <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.CoordX.Large.png" />
-    <None Include="Resources\Images\Small\Miscellany.Math.Functions.ToDouble.Small.png" />
     <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Height.Small.png" />
     <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Container.Small.png" />
     <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Width.Small.png" />
@@ -209,14 +214,9 @@
     <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Width.Large.png" />
     <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Volume.Large.png" />
     <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Length.Large.png" />
-    <None Include="Resources\Images\Small\Miscellany.Math.Functions.ToDecimal.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.Math.Functions.RunningTotal.Small.png" />
-    <None Include="Resources\Images\Large\Miscellany.Math.Functions.ToDouble.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.Math.Functions.ToDecimal.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.Math.Functions.RunningTotal.Large.png" />
-    <None Include="Resources\Images\Small\Miscellany.List.PairItems.Small.png" />
+    <None Include="Resources\Images\Small\Miscellany.List.Modifies.PairItems.Small.png" />
     <None Include="Resources\Images\Small\Miscellany.Geometry.Abstract.VectorDisplay.Small.png" />
-    <None Include="Resources\Images\Large\Miscellany.List.PairItems.Large.png" />
+    <None Include="Resources\Images\Large\Miscellany.List.Modifies.PairItems.Large.png" />
     <None Include="Resources\Images\Large\Miscellany.Geometry.Abstract.VectorDisplay.Large.png" />
     <None Include="Resources\Images\Small\Miscellany.Geometry.Abstract.CoordinateSystemDisplay.Small.png" />
     <None Include="Resources\Images\Large\Miscellany.Geometry.Abstract.CoordinateSystemDisplay.Large.png" />

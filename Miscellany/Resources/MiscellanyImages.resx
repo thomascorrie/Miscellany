@@ -1564,7 +1564,7 @@
         YfSE0RNGP0Ge43WVqSCmsbEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Miscellany.List.PairItems.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Miscellany.List.Modifies.PairItems.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EgAACxIB0t1+/AAAA5xJREFUeF7t28FRVEEUhWFCIARDMARcWuXCkIjBCAzBEDADt+6IgCKDsdseLGj+
@@ -1585,7 +1585,7 @@
         NB0YTQdG04HRdGA0HRhNB0bTgdF0YDQdGE0HRtOB0XRgNBWHq1+ulH4Ep8wIAwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Miscellany.List.PairItems.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Miscellany.List.Modifies.PairItems.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAC
         xAAAAsQBW5GdCwAAANpJREFUWEft0s0JwkAQQOGUkBJSSjwKFmMJKUGsKHbg1VsqCOlgnYEZ2MNbs5fM
@@ -1595,7 +1595,7 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Miscellany.Math.Functions.RunningTotal.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Miscellany.Maths.RunningTotal.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EgAACxIB0t1+/AAABKJJREFUeF7t3NFV20wUBGBaoAVaoALOoYW0QAu0wHPeaIEWaIEG8kALtODMzdGF
@@ -1621,7 +1621,7 @@
         b3jWWTUgLqgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Miscellany.Math.Functions.RunningTotal.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Miscellany.Maths.RunningTotal.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAC
         xAAAAsQBW5GdCwAAAWNJREFUWEfFlcttwzAQBd1CWnALriBAWnAtbiHn3NyCW3ALbiAHt5AWlDfErkDE
@@ -1633,7 +1633,7 @@
         YmUnVvax7H4B9NuYjaLBY+gAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Miscellany.Math.Functions.ToDecimal.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Miscellany.Maths.ToDecimal.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EgAACxIB0t1+/AAABW1JREFUeF7t3bFu1FgUBmAeAd4A5QmQeAFWSrPSFjT0VKnp0m5JudqObutU9Gmg
@@ -1662,7 +1662,7 @@
         oKHkQUPJg4aSBw0lDxpKHjSULHbP/gfECirB4BdaxwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Miscellany.Math.Functions.ToDecimal.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Miscellany.Maths.ToDecimal.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAC
         xAAAAsQBW5GdCwAAAUZJREFUWEft1TFKA0EUh/EcIXuFPUEgvSikEWztrazTbWnK1GKTztrK3ib2KWwt
@@ -1673,7 +1673,7 @@
         MNbQwE1kH4PZ0L4EYw0NbGX414zvD9cEoyeMnjB6wugJoyeMfsLkC68ZsW333pfBAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Miscellany.Math.Functions.ToDouble.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Miscellany.Maths.ToDouble.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EgAACxIB0t1+/AAABYxJREFUeF7t3TFuG0cUxnEfIb6BoRME8AUcQE2AFG7cp1KdTm1Kl0E6d65VpVfj
@@ -1703,7 +1703,7 @@
         jtsAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Miscellany.Math.Functions.ToDouble.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Miscellany.Maths.ToDouble.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAC
         xAAAAsQBW5GdCwAAAVNJREFUWEfF1TFKA0EUh/EcIbmB7AkC6UUhjWDrFazttk2ZUsQmnbWVvSCxT5HW

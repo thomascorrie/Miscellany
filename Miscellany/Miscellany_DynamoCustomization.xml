@@ -7,17 +7,17 @@
     <namespace name="Miscellany">
       <category>Miscellany</category>
     </namespace>
-    <namespace name="Miscellany.Geometry">
-      <category>Miscellany.Geometry</category>
-    </namespace>
-    <namespace name="Miscellany.Math">
-      <category>Miscellany.Math</category>
-    </namespace>
     <namespace name="Miscellany.ContainerPacking">
       <category>Miscellany.ContainerPacking</category>
     </namespace>
     <namespace name="Miscellany.ContainerPacking.Entities">
       <category>Miscellany.ContainerPacking.Entities</category>
+    </namespace>
+    <namespace name="Miscellany.Geometry">
+      <category>Miscellany.Geometry</category>
+    </namespace>
+    <namespace name="Miscellany.List">
+      <category>Miscellany.List</category>
     </namespace>
   </namespaces>
 </doc>
