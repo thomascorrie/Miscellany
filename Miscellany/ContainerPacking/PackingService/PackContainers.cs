@@ -51,6 +51,9 @@ namespace Miscellany.ContainerPacking
             List<double> PercentContainerVolumePacked = new List<double>();
             List<double> PercentItemVolumePacked = new List<double>();
 
+            //Sequence for packed Items
+            int seq = 1;
+
             //Loop through the containers
             foreach (Miscellany.ContainerPacking.Entities.Container container in containers)
             {
@@ -66,6 +69,8 @@ namespace Miscellany.ContainerPacking
                 foreach (Item i in algorithmPackingResult.PackedItems)
                 {
                     Miscellany.ContainerPacking.Entities.Item mItem = ItemToMiscellany(i);
+                    mItem.Sequence = seq;
+                    seq++;
                     itemsPackedPass.Add(mItem);
                 }
                 itemsPacked.Add(itemsPackedPass);
