@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Autodesk.DesignScript.Runtime;
 using Autodesk.DesignScript.Geometry;
-using Dynamo.Graph.Nodes;
 
 namespace Miscellany.Geometry
 {
@@ -27,7 +26,6 @@ namespace Miscellany.Geometry
         /// <returns name="XYPlane">Plane</returns>
         /// <returns name="YZPlane">Plane</returns>
         /// <returns name="ZXPlane">Plane</returns>
-        [NodeCategory("Query")]
         [MultiReturn(new[] { "Display", "Origin", "XAxis", "YAxis", "ZAxis", "XYPlane", "YZPlane", "ZXPlane" })]
         public static Dictionary<string, object> CoordinateSystemDisplay(Autodesk.DesignScript.Geometry.CoordinateSystem coordinateSystem, double length = 1000)
         {
@@ -76,7 +74,6 @@ namespace Miscellany.Geometry
         /// <returns name="XAxis">Vector</returns>
         /// <returns name="YAxis">Vector</returns>
         /// <returns name="Normal">Vector</returns>
-        [NodeCategory("Query")]
         [MultiReturn(new[] { "Display", "Origin", "XAxis", "YAxis", "Normal" })]
         public static Dictionary<string, object> PlaneDisplay(Autodesk.DesignScript.Geometry.Plane plane, double length = 1000)
         {
@@ -123,7 +120,6 @@ namespace Miscellany.Geometry
         /// <returns name="y">double</returns>
         /// <returns name="z">double</returns>
         /// <returns name="Length">double</returns>
-        [NodeCategory("Query")]
         [MultiReturn(new[] { "Display", "x", "y", "z", "Length" })]
         public static Dictionary<string, object> VectorDisplay(Autodesk.DesignScript.Geometry.Vector vector, Autodesk.DesignScript.Geometry.Point startPoint, double scale = 1000)
         {

@@ -1,0 +1,16 @@
+<Project>
+  <!-- Shared settings for every project in the repository -->
+  <PropertyGroup>
+    <Version>1.3.0</Version>
+    <Authors>Thomas Corrie</Authors>
+    <Company>Thomas Corrie</Company>
+    <Product>Miscellany</Product>
+    <Description>A collection of miscellaneous nodes for Dynamo</Description>
+    <Copyright>Copyright © 2018-2026 Thomas Corrie</Copyright>
+    <RepositoryUrl>https://github.com/thomascorrie/Miscellany</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <LangVersion>latest</LangVersion>
+    <!-- Dynamo 2.x (Revit 2020-2024) runs on .NET Framework 4.8; Dynamo 3.x and later (Revit 2025+) on .NET 8 or later -->
+    <MiscellanyTargetFrameworks>net48;net8.0</MiscellanyTargetFrameworks>
+  </PropertyGroup>
+</Project>

@@ -57,6 +57,12 @@ namespace Miscellany.ContainerPacking
             //Loop through the containers
             foreach (Miscellany.ContainerPacking.Entities.Container container in containers)
             {
+                //Nothing left to pack (CromulentBisgetti divides by the total Item volume, so it cannot pack an empty list)
+                if (items.Count == 0)
+                {
+                    break;
+                }
+
                 //Create CromulentBisgetti Container
                 Container con = ContainerToCB(container);
                 List<Container> cons = new List<Container> { con };
@@ -85,6 +91,9 @@ namespace Miscellany.ContainerPacking
                     break;
                 }
             }
+
+            //Complete only if nothing is left to pack (also true for an empty list of Items)
+            IsCompletePack = items.Count == 0;
 
             //Convert CromulentBisgetti items to Miscellany Items for Unpacked Items
             List<Miscellany.ContainerPacking.Entities.Item> itemsUnpacked = new List<Miscellany.ContainerPacking.Entities.Item>();

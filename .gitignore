@@ -319,3 +319,5 @@ __pycache__/
 
 
 # End of https://www.gitignore.io/api/windows,visualstudio
+# Dynamo package output from build/Build-Package.ps1
+dist/
