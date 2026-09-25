@@ -128,6 +128,14 @@ namespace Miscellany.ContainerPacking.Entities
         public int Quantity { get; set; }
 
         /// <summary>
+        ///     Gets the pack sequence number.
+        /// </summary>
+        /// <value>
+        /// The pack sequence number.
+        /// </value>
+        public int Sequence { get; set; }
+
+        /// <summary>
         ///     Gets the x dimension of the orientation of the item as it has been packed.
         /// </summary>
         /// <value>

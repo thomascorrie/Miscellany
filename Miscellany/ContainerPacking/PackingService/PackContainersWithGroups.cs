@@ -59,21 +59,22 @@ namespace Miscellany.ContainerPacking
             List<double> PercentContainerVolumePacked = new List<double>();
             List<double> PercentItemVolumePacked = new List<double>();
 
-            //Items Count
-            int currentPackGroup = items.Count - 1;
+            //Sequence for packed Items
+            int seq = 1;
 
             //Loop through the containers
             foreach (Miscellany.ContainerPacking.Entities.Container container in containers)
             {
-                if (items.Count == 0)
+                //Remove any empty groups so they don't use up a container
+                while (items.Count > 0 && items[items.Count - 1].Count == 0)
+                {
+                    items.RemoveAt(items.Count - 1);
+                }
+                if (items.Count == 0) //No more groups to pack
                 {
                     break;
                 }
-                if (items[currentPackGroup].Count == 0)
-                {
-                    items.RemoveAt(currentPackGroup); //Remove empty list
-                    currentPackGroup--; //move to next group
-                }
+                int currentPackGroup = items.Count - 1;
 
                 //Create list of items to pack
                 List<Item> itemsToPackGroup = items[currentPackGroup];
@@ -93,14 +94,14 @@ namespace Miscellany.ContainerPacking
                 foreach (Item i in algorithmPackingResult.PackedItems)
                 {
                     Miscellany.ContainerPacking.Entities.Item mItem = ItemToMiscellany(i);
+                    mItem.Sequence = seq;
+                    seq++;
                     itemsPackedPass.Add(mItem);
                 }
                 itemsPacked.Add(itemsPackedPass);
-                IsCompletePack = algorithmPackingResult.IsCompletePack;
-                if (IsCompletePack) //If all the items from that group are packed
+                if (algorithmPackingResult.IsCompletePack) //If all the items from that group are packed
                 {
                     items.RemoveAt(currentPackGroup); //Remove group from list to pack
-                    currentPackGroup--; //Move on to the next group
                 }
                 else
                 {
@@ -110,11 +111,10 @@ namespace Miscellany.ContainerPacking
                 TotalPackTimeInMilliseconds += Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds);
                 PercentContainerVolumePacked.Add(Miscellany.Maths.ToDouble(algorithmPackingResult.PercentContainerVolumePacked));
                 PercentItemVolumePacked.Add(Miscellany.Maths.ToDouble(algorithmPackingResult.PercentItemVolumePacked));
-                if (items.Count == 0) //No more groups to pack
-                {
-                    break;
-                }
             }
+
+            //Complete only if every group has been packed, not just the last container's group
+            IsCompletePack = items.All(l => l.Count == 0);
 
             //Convert CromulentBisgetti items to Miscellany Items for Unpacked Items
             List<Miscellany.ContainerPacking.Entities.Item> itemsUnpacked = new List<Miscellany.ContainerPacking.Entities.Item>();
