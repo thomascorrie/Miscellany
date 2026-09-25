@@ -2,10 +2,11 @@
 
 # Miscellany for Dynamo
 
+[![Build](https://github.com/thomascorrie/Miscellany/actions/workflows/build.yml/badge.svg)](https://github.com/thomascorrie/Miscellany/actions/workflows/build.yml)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](CONTRIBUTING.md)
 [![GitHub version](https://badge.fury.io/gh/thomascorrie%2FMiscellany.svg)](https://badge.fury.io/gh/thomascorrie%2FMiscellany)
 
-A collection of miscellaneous nodes for [Dynamo 2](http://www.dynamobim.org/) including an implementation of the C# library [3DContainerPacking](https://github.com/davidmchapman/3DContainerPacking) to use the [EB-AFIT container packing algorithm](https://github.com/wknechtel/3d-bin-pack) in Dynamo
+A collection of miscellaneous nodes for [Dynamo](https://dynamobim.org/) including an implementation of the C# library [3DContainerPacking](https://github.com/davidmchapman/3DContainerPacking) to use the [EB-AFIT container packing algorithm](https://github.com/wknechtel/3d-bin-pack) in Dynamo
 
 ![Nodes](Samples/Miscellany-Samples-Nodes.png)
 
@@ -19,15 +20,15 @@ See the [documentation](docs/README.md) and the [sample dyn files](Samples).
 See [Issues](https://github.com/thomascorrie/Miscellany/issues) for planned improvements and open issues.
 
 ## Contributing
-Contributions are welcome: [CONTRIBUTING.md](CONTRIBUTING.md). 
-1. Fork this repository
-2. Create a feature branch, e.g. feature/myFeature
-3. Commit your changes and push to your branch
-4. Create a new pull request
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to build, test and submit changes.
 
-## Prerequisites
-Dynamo 2.0 or later  
-.Net 4.6
+## Requirements
+Miscellany is built in two versions:
+
+| Build | Dynamo | Revit | .NET |
+|---|---|---|---|
+| Dynamo2 | 2.1 – 2.19 | 2020 – 2024 | .NET Framework 4.8 |
+| Dynamo3 | 3.0 and later | 2025 and later | .NET 8 (also loads in Dynamo's .NET 10 releases) |
 
 ## Licence
 [MIT](LICENSE). Releases up to and including 1.2.0 were published under earlier licences (LGPL-3.0 in this repository, AGPL-3.0 on the Dynamo package listing).

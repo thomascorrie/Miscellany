@@ -1,0 +1,40 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    # Windows is needed for the .NET Framework build and the node icons (Windows PowerShell)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test --configuration Release --no-build --logger "console;verbosity=normal"
+
+      - name: Package
+        shell: powershell
+        run: ./build/Build-Package.ps1 -Configuration Release
+
+      - name: Upload Dynamo packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: Miscellany-packages
+          path: dist/*.zip

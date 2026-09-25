@@ -1,254 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{07002681-B0FB-408B-8F71-15ACDAC9FE21}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworks>$(MiscellanyTargetFrameworks)</TargetFrameworks>
     <RootNamespace>Miscellany</RootNamespace>
     <AssemblyName>Miscellany</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <!-- The XML documentation provides the node descriptions and tooltips in Dynamo -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Copy NuGet dependencies (3DContainerPacking) to the output so they can be packaged -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Miscellany.xml</DocumentationFile>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <!-- Dynamo 3+ loads packages as plugins -->
+    <EnableDynamicLoading>true</EnableDynamicLoading>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Analysis, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.DynamoCoreNodes.2.1.0.7451\lib\net47\Analysis.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CromulentBisgetti">
-      <HintPath>..\..\..\3DContainerPacking\src\CromulentBisgetti.ContainerPacking\bin\Debug\CromulentBisgetti.dll</HintPath>
-    </Reference>
-    <Reference Include="DesignScriptBuiltin, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.Core.2.1.0.7451\lib\net47\DesignScriptBuiltin.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DSCoreNodes, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.DynamoCoreNodes.2.1.0.7451\lib\net47\DSCoreNodes.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DSIronPython, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.Core.2.1.0.7451\lib\net47\DSIronPython.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DynamoApplications, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.Core.2.1.0.7451\lib\net47\DynamoApplications.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DynamoCore, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.Core.2.1.0.7451\lib\net47\DynamoCore.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DynamoInstallDetective, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.Core.2.1.0.7451\lib\net47\DynamoInstallDetective.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DynamoServices, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.DynamoServices.2.1.0.7451\lib\net47\DynamoServices.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DynamoShapeManager, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.Core.2.1.0.7451\lib\net47\DynamoShapeManager.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DynamoUnits, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.ZeroTouchLibrary.2.1.0.7451\lib\net47\DynamoUnits.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DynamoUtilities, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.Core.2.1.0.7451\lib\net47\DynamoUtilities.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GeometryColor, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.DynamoCoreNodes.2.1.0.7451\lib\net47\GeometryColor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Expression.Interactions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ProtoCore, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.Core.2.1.0.7451\lib\net47\ProtoCore.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ProtoGeometry, Version=2.1.0.23964, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.ZeroTouchLibrary.2.1.0.7451\lib\net47\ProtoGeometry.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="VMDataBridge, Version=2.1.0.7451, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamoVisualProgramming.Core.2.1.0.7451\lib\net47\VMDataBridge.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+
+  <!-- Dynamo assemblies are supplied by the host, so only compile against them (ExcludeAssets="runtime").
+       Build against the oldest supported version of each generation so the package loads in every later version. -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <PackageReference Include="DynamoVisualProgramming.DynamoServices" Version="2.1.0.7451" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="DynamoVisualProgramming.ZeroTouchLibrary" Version="2.1.0.7451" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="DynamoVisualProgramming.DynamoCoreNodes" Version="2.1.0.7451" ExcludeAssets="runtime" PrivateAssets="all" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="About.cs" />
-    <Compile Include="ContainerPacking\Entities\Container.cs" />
-    <Compile Include="ContainerPacking\Entities\Item.cs" />
-    <Compile Include="ContainerPacking\PackingService\Conversions.cs" />
-    <Compile Include="ContainerPacking\PackingService\PackContainer.cs" />
-    <Compile Include="ContainerPacking\PackingService\PackContainers.cs" />
-    <Compile Include="ContainerPacking\PackingService\PackContainersWithGroups.cs" />
-    <Compile Include="ContainerPacking\PackingService\PackContainersWithGroupsContinuously.cs" />
-    <Compile Include="Lists\Lists.cs" />
-    <Compile Include="Maths\Maths.cs" />
-    <Compile Include="Geometry\Abstract.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PackageReference Include="DynamoVisualProgramming.DynamoServices" Version="3.0.4.7905" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="DynamoVisualProgramming.ZeroTouchLibrary" Version="3.0.4.7905" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="DynamoVisualProgramming.DynamoCoreNodes" Version="3.0.4.7905" ExcludeAssets="runtime" PrivateAssets="all" />
   </ItemGroup>
+
   <ItemGroup>
-    <None Include="packages.config" />
+    <PackageReference Include="3DContainerPacking" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Node icons are built into Miscellany.customization.dll by the Miscellany.Customization project -->
+    <None Remove="Resources\**" />
+    <EmbeddedResource Remove="Resources\**" />
     <None Include="pkg.json" />
+    <Content Include="Miscellany_DynamoCustomization.xml" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Miscellany.Migrations.xml" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Miscellany.Migrations.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Miscellany_DynamoCustomization.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Resources\Images\Large\Miscellany.Maths.RunningTotal.Large.png" />
-    <Content Include="Resources\Images\Large\Miscellany.Maths.ToDecimal.Large.png" />
-    <Content Include="Resources\Images\Large\Miscellany.Maths.ToDouble.Large.png" />
-    <Content Include="Resources\Images\Small\Miscellany.Maths.RunningTotal.Small.png" />
-    <Content Include="Resources\Images\Small\Miscellany.Maths.ToDecimal.Small.png" />
-    <Content Include="Resources\Images\Small\Miscellany.Maths.ToDouble.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.About.Miscellany.Small.png" />
-    <None Include="Resources\Images\Large\Miscellany.About.Miscellany.Large.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.ID.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.PackingService.PackContainersWithGroupsContinuously.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.PackingService.PackContainersWithGroups.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.PackingService.PackContainers.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.PackingService.PackContainer.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.Volume.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.Sequence.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.Quantity.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.PackDimZ.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.PackDimY.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.PackDimX.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.Item.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.IsPacked.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.Dim3.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.Dim2.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.Dim1.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.CoordZ.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.CoordY.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Item.CoordX.Small.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.PackingService.PackContainersWithGroupsContinuously.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.PackingService.PackContainersWithGroups.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.PackingService.PackContainers.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.PackingService.PackContainer.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.Volume.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.Sequence.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.Quantity.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.PackDimZ.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.PackDimY.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.PackDimX.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.Item.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.IsPacked.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.ID.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.Dim3.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.Dim2.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.Dim1.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.CoordZ.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.CoordY.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Item.CoordX.Large.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Height.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Container.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Width.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Volume.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.Length.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.ContainerPacking.Entities.Container.ID.Small.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.ID.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Height.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Container.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Width.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Volume.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.ContainerPacking.Entities.Container.Length.Large.png" />
-    <None Include="Resources\Images\Small\Miscellany.List.Modifies.PairItems.Small.png" />
-    <None Include="Resources\Images\Small\Miscellany.Geometry.Abstract.VectorDisplay.Small.png" />
-    <None Include="Resources\Images\Large\Miscellany.List.Modifies.PairItems.Large.png" />
-    <None Include="Resources\Images\Large\Miscellany.Geometry.Abstract.VectorDisplay.Large.png" />
-    <None Include="Resources\Images\Small\Miscellany.Geometry.Abstract.CoordinateSystemDisplay.Small.png" />
-    <None Include="Resources\Images\Large\Miscellany.Geometry.Abstract.CoordinateSystemDisplay.Large.png" />
-    <None Include="Resources\Images\Small\Miscellany.Geometry.Abstract.PlaneDisplay.Small.png" />
-    <None Include="Resources\Images\Large\Miscellany.Geometry.Abstract.PlaneDisplay.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\MiscellanyImages.resx" />
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(TargetDir)*.dll" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)\bin\"
-xcopy /Y "$(TargetDir)*.xml" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)\bin\"
-xcopy /Y "$(ProjectDir)pkg.json" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)"
-xcopy /Y "$(SolutionDir)Samples\*.dyn" "$(AppData)\Dynamo\Dynamo Revit\2.0\packages\$(ProjectName)\extra\"</PostBuildEvent>
-  </PropertyGroup>
-  <Target Name="AfterBuild">
-    <!-- Get System.Drawing.dll -->
-    <GetReferenceAssemblyPaths TargetFrameworkMoniker=".NETFramework, Version=v2.0">
-      <Output TaskParameter="FullFrameworkReferenceAssemblyPaths" PropertyName="FrameworkAssembliesPath" />
-    </GetReferenceAssemblyPaths>
-    <!-- Get assembly -->
-    <GetAssemblyIdentity AssemblyFiles="$(OutDir)$(TargetName).dll">
-      <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
-    </GetAssemblyIdentity>
-    <!-- Generate customization dll -->
-    <GenerateResource UseSourcePath="true" Sources="$(ProjectDir)\Resources\MiscellanyImages.resx" OutputResources="$(ProjectDir)\Resources\MiscellanyImages.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
-    <AL TargetType="library" EmbedResources="$(ProjectDir)\Resources\MiscellanyImages.resources" OutputAssembly="$(OutDir)Miscellany.customization.dll" Version="%(AssemblyInfo.Version)" />
-  </Target>
+
 </Project>

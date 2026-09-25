@@ -31,6 +31,19 @@ namespace Miscellany.ContainerPacking
         [MultiReturn(new[] { "packedItems", "unpackedItems", "isCompletePack", "packTimeInMilliseconds", "percentContainerVolumePacked", "percentItemVolumePacked" })]
         public static Dictionary<string, object> PackContainer(Miscellany.ContainerPacking.Entities.Container container, List<Miscellany.ContainerPacking.Entities.Item> itemsToPack, int algorithm = 1)
         {
+            //Nothing to pack (CromulentBisgetti divides by the total Item volume, so it cannot pack an empty list)
+            if (itemsToPack.Count == 0)
+            {
+                var empty = new Dictionary<string, object>();
+                empty.Add("packedItems", new List<Miscellany.ContainerPacking.Entities.Item>());
+                empty.Add("unpackedItems", new List<Miscellany.ContainerPacking.Entities.Item>());
+                empty.Add("isCompletePack", true);
+                empty.Add("packTimeInMilliseconds", 0);
+                empty.Add("percentContainerVolumePacked", 0.0);
+                empty.Add("percentItemVolumePacked", 0.0);
+                return empty;
+            }
+
             //Create CromulentBisgetti Container
             Container con = ContainerToCB(container);
 

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Builds Miscellany.customization.dll: a resource-only assembly holding the node icons that Dynamo shows in its library.
+       Dynamo looks for a resource named "<Assembly>Images.resources" in "<Assembly>.customization.dll" next to the node library. -->
+  <PropertyGroup>
+    <TargetFrameworks>$(MiscellanyTargetFrameworks)</TargetFrameworks>
+    <AssemblyName>Miscellany.customization</AssemblyName>
+    <RootNamespace>Miscellany</RootNamespace>
+    <IconsDir>$(MSBuildThisFileDirectory)..\Miscellany\Resources\Images</IconsDir>
+    <!-- Dynamo 2.x (net48) reads icons as Bitmap objects; Dynamo 3.x and later read them as PNG byte arrays -->
+    <IconFormat Condition="'$(TargetFramework)' == 'net48'">Bitmap</IconFormat>
+    <IconFormat Condition="'$(TargetFramework)' != 'net48'">Bytes</IconFormat>
+    <!-- BaseIntermediateOutputPath (obj\) is defined before this point; IntermediateOutputPath is not -->
+    <IconResources>$([System.IO.Path]::Combine($(MSBuildProjectDirectory), $(BaseIntermediateOutputPath), 'icons', $(TargetFramework), 'MiscellanyImages.resources'))</IconResources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <IconFile Include="$(IconsDir)\Large\*.png;$(IconsDir)\Small\*.png" />
+  </ItemGroup>
+
+  <!-- Windows PowerShell (.NET Framework) is needed to write Bitmap resources that Dynamo 2.x can read -->
+  <Target Name="GenerateIconResources" BeforeTargets="PrepareForBuild" Inputs="@(IconFile);$(MSBuildThisFileDirectory)..\build\New-IconResources.ps1" Outputs="$(IconResources)">
+    <Error Condition="'$(OS)' != 'Windows_NT'" Text="The node icons can only be built on Windows (Windows PowerShell is required)." />
+    <Exec Command="powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File &quot;$(MSBuildThisFileDirectory)..\build\New-IconResources.ps1&quot; -Format $(IconFormat) -ImagesDir &quot;$(IconsDir)&quot; -OutFile &quot;$(IconResources)&quot;" />
+  </Target>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(IconResources)" LogicalName="MiscellanyImages.resources" WithCulture="false" Type="Non-Resx" />
+  </ItemGroup>
+
+</Project>
