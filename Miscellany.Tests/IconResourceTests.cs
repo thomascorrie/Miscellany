@@ -14,8 +14,8 @@ namespace Miscellany.Tests
     {
         private static ResourceManager IconResources()
         {
-            string dir = Path.GetDirectoryName(typeof(IconResourceTests).Assembly.Location);
-            var assembly = Assembly.LoadFrom(Path.Combine(dir, "Miscellany.customization.dll"));
+            // Not Assembly.Location: on .NET Framework the test runner shadow-copies test assemblies to a temp folder
+            var assembly = Assembly.LoadFrom(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Miscellany.customization.dll"));
             return new ResourceManager("MiscellanyImages", assembly);
         }
 
