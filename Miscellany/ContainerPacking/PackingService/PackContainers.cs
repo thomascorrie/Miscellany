@@ -22,8 +22,8 @@ namespace Miscellany.ContainerPacking
         /// <returns name="packedItems">Items that were successfully packed</returns>
         /// <returns name="unpackedItems">Items that were not packed</returns>
         /// <returns name="isCompletePack">Are all items packed?</returns>
-        /// <returns name="packTimeInMilliseconds">Total pack time</returns>
-        /// <returns name="totalPackTimeInMilliseconds">Pack time per container</returns>
+        /// <returns name="packTimeInMilliseconds">Pack time per container</returns>
+        /// <returns name="totalPackTimeInMilliseconds">Total pack time</returns>
         /// <returns name="percentContainerVolumePacked">Percentage of the container that is packed</returns>
         /// <returns name="percentItemVolumePacked">Percentage of items packed</returns>
         /// <search>

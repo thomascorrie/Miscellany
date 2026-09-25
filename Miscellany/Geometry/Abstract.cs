@@ -15,7 +15,7 @@ namespace Miscellany.Geometry
     public static class Abstract
     {
         /// <summary>
-        /// Shows scalable lines representing the CoordinateSystem axes and rectangles for the planes
+        /// Shows scalable lines representing the CoordinateSystem axes
         /// </summary>
         /// <param name="coordinateSystem">Autodesk.DesignScript.Geometry.CoordinateSystem</param>
         /// <param name="length">double</param>
