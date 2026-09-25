@@ -63,7 +63,7 @@ namespace Miscellany.ContainerPacking
                 //Get container packing result
                 ContainerPackingResult containerPackingResult = CromulentBisgetti.ContainerPacking.PackingService.Pack(cons, items, algorithms).FirstOrDefault();
                 //Get the single algorthim packing result from the container packing result
-                AlgorithmPackingResult algorithmPackingResult = containerPackingResult.AlgorithmPackingResults.FirstOrDefault();
+                AlgorithmPackingResult algorithmPackingResult = AsSingleUnits(containerPackingResult.AlgorithmPackingResults.FirstOrDefault());
                 //Packed Items
                 List<Miscellany.ContainerPacking.Entities.Item> itemsPackedPass = new List<Miscellany.ContainerPacking.Entities.Item>();
                 foreach (Item i in algorithmPackingResult.PackedItems)
