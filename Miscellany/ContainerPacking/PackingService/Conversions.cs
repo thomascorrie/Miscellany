@@ -35,6 +35,21 @@ namespace Miscellany.ContainerPacking
             return mItem;
         }
 
+        //CromulentBisgetti expands each Item into Quantity single units but each unit keeps the original Quantity.
+        //Reset them to 1 so re-packed Items are not expanded again and outputs show one unit per Item
+        private static AlgorithmPackingResult AsSingleUnits(AlgorithmPackingResult result)
+        {
+            foreach (Item i in result.PackedItems)
+            {
+                i.Quantity = 1;
+            }
+            foreach (Item i in result.UnpackedItems)
+            {
+                i.Quantity = 1;
+            }
+            return result;
+        }
+
         //Convert Miscellany Container to CromulentBisgetti Container
         private static Container ContainerToCB(Miscellany.ContainerPacking.Entities.Container c)
         {

@@ -52,7 +52,7 @@ namespace Miscellany.ContainerPacking
             ContainerPackingResult containerPackingResult = CromulentBisgetti.ContainerPacking.PackingService.Pack(containers, items, algorithms).FirstOrDefault();
             
             //Get the single algorthim packing result from the container packing result
-            AlgorithmPackingResult algorithmPackingResult = containerPackingResult.AlgorithmPackingResults.FirstOrDefault();
+            AlgorithmPackingResult algorithmPackingResult = AsSingleUnits(containerPackingResult.AlgorithmPackingResults.FirstOrDefault());
             bool IsCompletePack = algorithmPackingResult.IsCompletePack;
             int PackTimeInMilliseconds = Convert.ToInt32(algorithmPackingResult.PackTimeInMilliseconds); //Max limit of int32 for milliseconds is596 hours
             double PercentContainerVolumePacked = Miscellany.Maths.ToDouble(algorithmPackingResult.PercentContainerVolumePacked);
