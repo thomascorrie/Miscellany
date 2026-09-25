@@ -30,7 +30,9 @@ Dynamo 2.0 or later
 .Net 4.6
 
 ## Licence
-AGPL-3.0
+[MIT](LICENSE). Releases up to and including 1.2.0 were published under earlier licences (LGPL-3.0 in this repository, AGPL-3.0 on the Dynamo package listing).
+
+Third-party components are listed in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
 ## Author
 Thomas Corrie: [GitHub](https://github.com/thomascorrie) - [Twitter](https://twitter.com/didymuscoombe) - [Website](http://www.thomascorrie.com)
