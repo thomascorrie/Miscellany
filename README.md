@@ -16,7 +16,7 @@ A collection of miscellaneous nodes for [Dynamo 2](http://www.dynamobim.org/) in
 See [Sample dyn files](Samples) and the [Project Wiki](https://github.com/thomascorrie/Miscellany/wiki) for documentation.
 
 ## Future Development and Issue Tracking
-See the [Project Board](https://github.com/thomascorrie/Miscellany/projects/1) for planned improvements and open issues.
+See [Issues](https://github.com/thomascorrie/Miscellany/issues) for planned improvements and open issues.
 
 ## Contributing
 Contributions are welcome: [CONTRIBUTING.md](CONTRIBUTING.md). 
