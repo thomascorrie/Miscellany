@@ -1,28 +1,28 @@
-![Logo](https://github.com/thomascorrie/Miscellany/blob/master/Miscellany/Resources/Images/Large/Miscellany.About.Miscellany.Large.png)
+![Logo](Miscellany/Resources/Images/Large/Miscellany.About.Miscellany.Large.png)
 
 # Miscellany for Dynamo
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](CONTRIBUTING.md)
 [![GitHub version](https://badge.fury.io/gh/thomascorrie%2FMiscellany.svg)](https://badge.fury.io/gh/thomascorrie%2FMiscellany)
 
 A collection of miscellaneous nodes for [Dynamo 2](http://www.dynamobim.org/) including an implementation of the C# library [3DContainerPacking](https://github.com/davidmchapman/3DContainerPacking) to use the [EB-AFIT container packing algorithm](https://github.com/wknechtel/3d-bin-pack) in Dynamo
 
-![Nodes](https://github.com/thomascorrie/Miscellany/blob/master/Samples/Miscellany-Samples-Nodes.png)
+![Nodes](Samples/Miscellany-Samples-Nodes.png)
 
 ## Installation
 **Miscellany** is available on the Dynamo package manager.
 
 ## Documentation and Samples
-See [Sample dyn files](https://github.com/thomascorrie/Miscellany/tree/master/Samples) and the [Project Wiki](https://github.com/thomascorrie/Miscellany/wiki) for documentation.
+See [Sample dyn files](Samples) and the [Project Wiki](https://github.com/thomascorrie/Miscellany/wiki) for documentation.
 
 ## Future Development and Issue Tracking
 See the [Project Board](https://github.com/thomascorrie/Miscellany/projects/1) for planned improvements and open issues.
 
 ## Contributing
-Contributions are welcome: [CONTRIBUTING.md](https://github.com/thomascorrie/Miscellany/blob/master/CONTRIBUTING.md). 
+Contributions are welcome: [CONTRIBUTING.md](CONTRIBUTING.md). 
 1. Fork this repository
 2. Create a feature branch, e.g. feature/myFeature
-3. Commit your changes and bush to your branch
+3. Commit your changes and push to your branch
 4. Create a new pull request
 
 ## Prerequisites
